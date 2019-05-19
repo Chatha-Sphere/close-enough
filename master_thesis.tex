@@ -1,0 +1,1893 @@
+\documentclass[12pt, letterpaper, oneside]{book}
+
+\usepackage[left=1.5in, right=1.25in, top=1.25in, bottom=1.25in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[mathscr]{eucal}
+\usepackage{layout}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage[ampersand]{easylist}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{setspace}\doublespacing
+\usepackage{dsfont}
+
+
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%%%  XY-PIC  %%%
+
+%\input xy
+%\xyoption{all}
+
+%%  GREEK  LETTERS %%
+
+\newcommand{\ga}{\ensuremath{\alpha}}
+\newcommand{\gb}{\ensuremath{\beta}}
+\newcommand{\gc}{\ensuremath{\chi}}
+\newcommand{\gd}{\ensuremath{\delta}}
+\renewcommand{\ge}{\ensuremath{\varepsilon}}
+\newcommand{\gfu}{\ensuremath{\phi}}
+\newcommand{\gf}{\ensuremath{\varphi}}
+\renewcommand{\gg}{\ensuremath{\gamma}}
+\newcommand{\gh}{\ensuremath{\eta}}
+\newcommand{\gi}{\ensuremath{\iota}}
+\newcommand{\gk}{\ensuremath{\kappa}}
+\newcommand{\gl}{\ensuremath{\lambda}}
+\newcommand{\gm}{\ensuremath{\mu}}
+\newcommand{\gn}{\ensuremath{\nu}}
+\newcommand{\go}{\ensuremath{\omega}}
+\newcommand{\gq}{\ensuremath{\theta}}
+\newcommand{\gr}{\ensuremath{\rho}}
+\newcommand{\gs}{\ensuremath{\sigma}}
+\newcommand{\gt}{\ensuremath{\tau}}
+\newcommand{\gu}{\ensuremath{\upsilon}}
+\newcommand{\gx}{\ensuremath{\xi}}
+\newcommand{\gy}{\ensuremath{\psi}}
+\newcommand{\gz}{\ensuremath{\zeta}}
+
+\newcommand{\veps}{\varepsilon}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+
+
+\newcommand{\gX}{\ensuremath{\Xi}}
+
+%%%  NUMBERS?  %%%
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Hyp}{\mathbb{H}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\z}[1]{\mathbb{Z}_{#1}}
+\newcommand{\T}{\mathbb{T}}
+
+%%%  CALCULUS  %%%
+
+\newcommand{\limit}[1]{\lim\limits_{#1}}
+
+%%% ARROWS %%%
+
+\newcommand{\lto}{\longrightarrow}
+\newcommand{\llto}{\longleftarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+\newcommand{\lmto}{\longmapsto}
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\onto}{\twoheadrightarrow}
+\newcommand{\mto}{\mapsto}
+\newcommand{\from}{\leftarrow}
+
+%%%  OTHERS  %%%
+
+\newcommand{\co}{\colon\,}
+\newcommand{\st}{ \: | \: }
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\calL}{\mathcal L}
+\newcommand{\calF}{\mathcal F}
+
+
+%Delimiters
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\set}{\lbrace}{\rbrace}
+\DeclarePairedDelimiter{\parens}{\lparen}{\rparen}
+
+
+%%  STYLES  %%
+
+\newcommand{\bb}{\mathbb}
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}}
+
+
+%% THEOREMS %%
+
+\theoremstyle{plain}
+	\newtheorem{theorem}{Theorem}
+	\newtheorem{fact}{Fact}
+	\newtheorem{lemma}[theorem]{Lemma}
+	\newtheorem{tion}{Proposition}
+	\newtheorem{corollary}{Corollary}
+	\newtheorem{dogma}{Dogma}
+\theoremstyle{definition}	
+	\newtheorem{definition}{Definition}
+	\newtheorem{problem}{Problem}
+	\newtheorem*{exercise}{Exercise}
+	\newtheorem{claim}{Claim}
+	\newtheorem{question}{Question}
+	\newtheorem{conjecture}{Conjecture}
+\theoremstyle{remark}
+	\newtheorem{example}{Example}
+	\newtheorem*{remark}{Remark}
+
+
+\begin{document}
+\frontmatter
+\begin{titlepage}
+  \begin{center}
+
+   {\Large \textbf{Wesleyan University}}
+
+    \vspace{1cm}
+
+    {\Huge \textbf{Close Enough: a Dynamical Approach to the Littlewood Conjecture}}
+
+    \vspace{1cm}
+    
+%what do I put here??
+
+{\large \textbf{by\\
+    Prayag George Singh Chatha}
+}
+    \vspace{1cm}
+
+   
+
+   % \vspace{1cm}
+
+{\large Advisor: Felipe A.~Ram{\'i}rez\\
+    Assistant Professor of Mathematics}
+
+    \vspace{1cm}
+    
+    \begin{singlespace}
+    {\emph{A Thesis in Mathematics\\
+    submitted in partial fulfillment of the\\
+    requirements for the degree of Master of Arts\\
+    at Wesleyan University}}
+    \end{singlespace}
+    \vspace{1cm}
+
+      Middletown, CT \hfill      May, 2016
+  \end{center}
+\end{titlepage}
+
+
+\chapter*{Acknowledgements}
+
+First and foremost, I would like to thank my advisor, Felipe Ram{\'i}rez: ever generous with his time, he was a font of mathematical clarity, wise counsel, and corny (often funny) jokes, without which this thesis would never have been written. It has been a pleasure to work with and learn from him for over a year now; I couldn't have asked for a better advisor. I'd also like to single out my undergraduate advisors, Adam Fieldsteel, who welcomed me as a late-entry into the major and inducted me into the discipline of analysis, and Cameron Hill, who graciously mentored me for a summer research in 2015 and convinced me to pursue the BA/MA degree. Thank you both for placing your faith in a novice. Thanks of course to Caryn Canalia, the math department faculty, and my fellow grad students, for making the sixth floor such a fun place to be. 
+To Helena, you have my gratitude for being the most agreeable of roommates. Together, we ran one heck of a victory lap. Shouts out to Throw Culture and the folks at 71 Lawn for keeping me young-at-heart. To Annie, Jaspal, and Nasim: I could not have gotten here without your support. 
+
+
+\chapter*{Abstract}
+Diophantine approximation is a branch of number theory that concerns the metric relationship of the rationals and irrationals. Much of the present-day research in the subject approaches problems of approximation via dynamics. We introduce the Littlewood Conjecture, a longstanding problem that was almost completely proven in 2006 by a theorem of Einsiedler, Katok, and Lindenstrauss. After giving an exposition of classical Diophantine approximation and fundamental ergodic theory, we set out a survey of the aforementioned theorem's context, particularly the motivation of the authors' dynamical approach, rich connections to linear algebra and hyperbolic geometry, an exploration of measure rigidity, and an interpretation of the paper's main conclusions. 
+
+
+\setcounter{tocdepth}{0} %excludes sections from toc
+\tableofcontents
+
+\mainmatter
+\chapter{Introduction}
+
+For any $x \in \R,$ let $\norm{x}$ denote the distance from $x$ to the nearest integer. We may reformulate the commonly-known fact that the rationals are densely distributed among the reals as follows: for every $\ge > 0,$ for some integer $q,$ $\norm{qx} < q\cdot\ge.$ In this case, $q$ is the denominator of a rational approximation of $x,$ and its numerator is some $p,$ the nearest integer to $qx.$ Whenever $x$ is irrational, $\norm{qx} \neq 0$ for all $q \in \Z.$ 
+
+We can think of the analysis of $\norm{qx}$ as the object of study in \textit{Diophantine approximation}, a classical branch of number theory that yields unsolved problems to this day. How quickly does the infimum of $\norm{qx}$ approach 0? Are there effective bounds we can place on the distance with respect to $q$? Do all irrational numbers behave equally? The answers are, in reverse order, ``no," ``yes," and ``it depends." Another way to imagine Diophantine approximation is as the quantitative study of the density of $\Q$ in $\R.$ We remark that because $\norm{x} \leq 1,$ we often work with the real line modded out by the integers, that is $\R/\Z = \T,$ the one-dimensional torus. Virtually anything we might prove about approximation on this compact space we can generalize to all of $\R.$ 
+
+Sometime in the 1930s, J. E. Littlewood (1885-1977) proposed one of the more famous problems in the field.
+
+\begin{conjecture}[Littlewood's Conjecture]\label{LC}
+  For all $\alpha, \beta \in \R,$
+  \[
+  \liminf\limits_{n \to \infty}\,n \norm{n \ga} \norm{n \gb}  = 0.
+  \]
+\end{conjecture} 
+In the words of Akshay Venkatesh, the Littlewood Conjecture (or the LC, from here on out) asserts that ``$\ga, \gb$ may be simultaneously approximated, moderately well, by rationals with the same denominator" (\cite{Ven08}). It is generally believed, but not known, that the infimum of $\norm{n \ga} \cdot \norm{n \gb}$ always approaches zero faster than $1/n.$ This unsolved conjecture will serve as a focus and unifying thread throughout this survey of Diophantine approximation and contemporary methods of investigation.
+
+In chapter two, we will cover some of the classical results of Diophantine approximation, leading to a presentation of Khinchine's result, which predates the LC and motivates the hypothesis. 
+
+\begin{fact}
+The set $\Xi$, comprising all $(\ga , \gb) \in \R^2$ such that the Littlewood conjecture is not satisfied, has Lebesgue measure zero. Therefore, the LC is a problem about a set of zero measure. 
+\end{fact}
+
+(If $\liminf \limits_{n \to \infty} n \norm{n\ga} = 0,$ then the LC holds. But one can find certain irrationals $x$ such that $\liminf\limits_{n \to \infty} n\norm{nx} > 0.$ Numbers with this property are the only possible exceptional points in the LC. Khinchin (1894 - 1959) proved that these numbers, the so-called \textit{badly-approximables}, are a zero-measure set in $\R/\Z.$)
+
+Despite our knowledge that the LC is, probabilistically, `almost always true,' to find the above limit inferior via explicit calculation turns out to be rather difficult. Namely, a sequence $(n_k)$ of integers (denominators) such that $\norm{n_k\ga}$ decreases might not lend itself to minimizing $\norm{n\gb}.$ Indeed, it is unknown (for instance) whether 
+  \[
+  \liminf\limits_{n \to \infty}\,n \norm{\sqrt{2} n} \norm{\sqrt{3} n}  = 0,
+  \]
+noting that both $\sqrt{2}$ and $\sqrt{3}$ are badly-approximable. 
+
+
+The intuition underlying the LC is that two (badly-approximable) numbers will always `conspire' so that $\norm{n\ga}$ and $\norm{n\gb}$ are not both large, infinitely often. Which is to say that their product is small, infinitely often. 
+
+The first significant contribution to the LC came from  Cassels and Swinnerton-Dyer, who in 1955 proved that the Littlewood Conjecture is satisfied for $\ga$ and $\gb$
+belonging to the same cubic field (\cite{Cas55}). We shall not explore their work in any detail, for their proof is abstruse, and their result, while providing specific examples of successful Littlewood pairs, tells us little about the general truth of the LC. We should note, however, that Cassels and Swinnerton-Dyer appear to be the first mathematicians to treat the lefthand side of the formula of the LC as the product $P$ of three linear forms, viz. $n,$ $(n\ga - m),$ and $(n\gb - l),$ where $n$, $m$, and $l$ range over the integers and (we must be careful) $n \neq 0.$ The question of Diophantine approximation becomes a \textit{Diophantine inequality}, where we wish to find non-trivial solutions to $P(\vec{x}) < \ge$ for $\vec{x} \in \Z^3.$ This slight generalization of the problem allows for enormous flexibility in approaching the LC from the perspective of \textit{homogeneous dynamics.} 
+
+In Chapter Three, we present a general introduction to the theory of dynamical systems and to ergodic theory--roughly speaking, the branch of dynamics studying transformations on spaces equipped with invariant measures--culminating in a discussion of \textit{measure rigidity}, the extent to which the invariant measures of a system are fixed in a predictable manner, and \textit{measure theoretic entropy}, which is an important ingredient of the best result so far on the LC.
+
+The seminal result in  applications of dynamics to number theory comes from G. A. Margulis, who proved the Oppenheim Conjecture sixty years after the problem was first posed in 1929. The Oppenheim Conjecture posits that an indefinite quadratic form, not the multiple of a rational form, with three (or more) variables takes arbitrarily small values over the integers. The statement of the problem is evocative of the above formulation of the LC. For instance, for every $\ge > 0,$ 
+\[
+Q(\vec{x}) = x_1^2 + x_2^2 - \sqrt{2} x_3^2 < \ge
+\]
+is solvable for some solution $\vec{x} \in \Z^3$ (\cite{Ven08}). His key observation, which we will explicate in Chapter Four, was to recast the density properties of forms in $n$ variables as the density of orbits of certain flows in the $n$-dimension space of unimodular lattices $\mathcal{L}_n,$ which we can naturally equate with the quotient $\mbox{SL}(n,\R)/\mbox{SL}(n, \Z).$ In the case of the Oppenheim conjecture, these flows were a parametrized group $H$ of \textit{unipotent} matrices corresponding to the symmetry (automorphism) group of $Q.$ A bounded orbit in the space of lattices is one that stays away from its `cusp' (a lattice is near the cusp of $\mathcal{L}_n$ if it contains a small non-zero vector), and a complete classification of all $H$-invariant closed sets (or equivalently, $H$-invariant measures) has the result of classifying all $H$-orbit types. If there are no $H$-invariant closed (proper) subsets of $\mathcal{L}_n,$ the existence of bounded $H$-orbits is precluded. (Similarly, the fact that there are no $H$-invariant measures, up to composition, besides Haar (`algebraic') measures associated with some topological group containing $H$, has this same implication.)
+
+The analogous approach to the Littlewood Conjecture proves more difficult because the symmetry group of Littlewood's form $P$ is a group of \textit{hyperbolic} matrices, namely the set of diagonal matrices of determinant one, which we call $A_n.$ Roughly speaking, the coefficients of hyperbolic matrices grow exponentially whereas those of unipotent, or `parabolic' matrices (i.e. those whose complex eigenvalues are 1 alone) diverge only polynomial fast, and so we `lose' information about the orbits of hyperbolic matrices much sooner (\cite{Ven08}). Nonetheless, in 2006, Einsiedler, Katok, and Lindenstrauss proved the following:
+
+\begin{theorem}
+Let $\mu$ be an $A_n$-invariant and ergodic measure on $X_n = \mbox{SL}(n,\R)/\mbox{SL}(n, \Z)$ for $n \geq 3.$ Suppose that there exists a one-parameter subgroup of $A_n$ acting on $X_n$ with positive entropy (w.r.t $\mu$). Then $\mu$ is algebraic: there is a closed, connected group $L > A_n$ so that $\mu$ is the $L$-invariant measure on a single, closed $L$-orbit. 
+\end{theorem}
+
+The group structure of $A_n$ within $\mbox{SL}(n,\R)$ is well understood, giving us a classification of special linear subgroups $L$ and their corresponding measures. In this way, the authors categorized all $A_n$-invariant measures that exhibit positively entropic behavior. We note that the statement of the above theorem mirrors quite closely a result of Daniel Rudolph, that partially answers Harry Furstenberg's $\times2\times3$ Conjecture. It is commonly known that there exist many closed subsets of (and, accordingly, many invariant measures on) the circle that are invariant under a single-rank expansive action, such as $\times2: (x) \mapsto 2x\mod1$: as we will see in Chapter Three, some of these are fractal Cantor sets. Furstenberg proved that, for co-prime $p,q$, the orbit closure $\overline{\set{p^nq^m}}_{n,m\geq0}$ is either finite (for rational $x$) or otherwise the whole circle, $\R/\Z.$ He conjectured, plausibly, that any measure that is invariant under the action $\times2\times3$ on $\R/\Z$ is either Lebesgue measure or a Dirac measure supported on a finite set. Rudolph's 1990 theorem is the following \cite{Rud90}:
+
+\begin{theorem}
+Let $\mu$ be a probability measure on $\R/\Z$ that is invariant under and ergodic with respect to $\times2$ and $\times3,$ and assume that either $\times 2$ or $\times3$ acts with positive entropy. Then $\mu$ is Lebesgue measure. 
+\end{theorem}
+
+Given that Lebesgue measure is the `algebraic' measure up to a scalar constant, invariant with respect to multiplication (i.e., circle expansion), the parallels to the result of EKL are evident. Though both theorems require an entropic hypothesis, the methodology of the proofs differ greatly. But one may consider both EKL and Rudolph as facts about the rigidity of systems with ``higher rank hyperbolic homogeneous actions" (\cite{ME06}), those with transformations that take two or more parameters, which display expansive and/or contracting behavior. As we shall see in Chapter Four, the best two-dimensional analogue of $A_n$ is the diagonal action (i.e., $A_2$) on $\mathcal{L}_2,$ which comes with diverse invariant measures and closed invariant sets (similarly to $\times2$ acting on $\R/\Z.$) Remarkably, the badly-approximable numbers may be embedded in these orbits. 
+
+The following is a direct corollary of Theorem 1, and is considered to be the state-of-the art of progress on the LC: 
+
+\begin{theorem}
+Let $\Xi$, as before, be the set of points for which the Littlewood conjecture does not hold. Then its Hausdorff dimension $\mbox{dim}_H(\Xi)=0.$ 
+\end{theorem}
+
+It is worth remarking that the $\mbox{dim}_H(\mathbf{BA}) = 1.$ We will discuss this fact and exposit Hausdorff dimension more generally in Chapter 4.5. Perhaps we could draw a loose analogy to a situation in which we had a conjecture that was open for a one-dimensional (in the common, Euclidean sense) set, such as a line, and we arrived at a result that reduces the uncertainty of the problem to a zero-dimensional set, like a point. This gives us some sense of the strength of Theorem 3. Also note that if we could obviate the assumption of positive entropy in Theorem 1, we would have the full proof of the LC (\cite{Ven08}). 
+
+\chapter{Diophantine approximation}
+
+\section{First Approach}
+
+Diophantus of Alexandria (lived c. 3rd Century CE) probably holds the distinction of being the first algebraist to publish. His treatise
+\textit{Arithmetica} presented 130 algebraic problems, many of which
+did not see a solution until the early modern era and beyond
+(cf. Fermat's Last Theorem and the Hardy--Ramanujam numbers). Though
+he is the namesake of Diophantine approximation, Diophantus's work has
+little to do with number theory. 
+
+Rather, the mathematics of approximating numbers is called `Diophantine' because it can inform the existence (or not) of solutions to types of Diophantine equations, namely polynomial equations for which only integer solutions are sought. 
+
+\begin{definition}[Optimal Diophantine Approximations]
+We say that the rational $p/q$, with $p,q$ co-prime, is a best Diophantine approximation of $\ga \in \R$ if
+\[
+\abs{q\ga - p} < |q'\ga-p'|
+\]
+for all $p'/q' \in \Q$ such that $1\leq q'\leq q$ and $p/q \neq p'/q.'$ In simpler terms, $p/q$ is a best approximation if it `beats' all other approximations, not a multiple of $p/q,$ with smaller denominators. Whenever $p/q$ is a best approximation of $\ga,$ we find that $\norm{q\ga}=\abs{q\ga - p}$.
+\end{definition}
+
+For instance, the first couple best approximations of $\pi$ are $3, 22/7, 333/106, 355/113,$ and $103993 / 33102.$ 
+
+\begin{remark} A common alternate definition of best Diophantine approximation replaces the above inequality with
+\[
+\abs*{\ga - \frac{p}{q}}<\abs*{\ga - \frac{p'}{q'}},
+\]
+which is a weaker condition (\cite{AMR92}) than the former. Throughout this paper I will stick by the first definition. 
+\end{remark}
+
+
+
+The following result (c. 1836) of Peter Gustav Lejeune Dirichlet (1805-1889) is considered to be the foundational theorem of Diophantine approximation. 
+
+\begin{theorem}[Dirichlet's Approximation Theorem]
+  For any $\ga \in \R$, for every $N \in \Z _{+}$, there exists a pair
+  $(p,q) \in \Z \times \set{1,\ldots,N}$ such that
+  \[|q\ga - p| < \frac{1}{N}\]
+\end{theorem}
+
+The proof is notable for being the first documented application of the
+\textit{Schubfachprinzip}, or Pigeonhole Principle.
+
+\begin{proof}
+  Fixing a positive integer $N$, we must find a $q$ such that
+  $\norm{q\ga} < \frac{1}{N}.$ Having found such
+  a $q$, our choice of $p$ immediately follows: it's
+  simply the integer nearest to $q\ga$.
+
+Consider the following sequence of integer multiples of $\ga,$ $\mod 1$: $S:= (\ga, 2\ga, \ldots, (N+1)\ga).$
+By the Pigeonhole Principle, it must be that for some pair $q_1\ga, q_2\ga \in S$, where $q_1 < q_2,$ 
+  \[
+  q_1\ga, q_2\ga \in \Big[\frac{m-1}{N}, \frac{m}{N}\Big),
+  \]
+  where $m \in {1,\ldots,N}$. (Observe that $S$ gives us $N+1$ points
+  distributed across $N$ slices of the unit interval: two multiples
+  must occupy the same slice.) Hence
+  \[
+  q_2\ga - q_1\ga \in \Big[0, \frac{1}{N}\Big),
+  \]
+  implying 
+  \[
+  (q_2 - q_1)\ga \in \Big[0, \frac{1}{N}\Big).
+  \]
+  Letting $q = q_2 - q_1$, we have that
+  \[\norm{q\ga} < \frac{1}{N},\]
+  which proves the theorem.
+\end{proof}
+
+Notice that in the previous theorem, we can take $(p,q)=1$,
+trivially: it's simply a matter of dividing out the pair by their greatest common factor.
+
+\begin{corollary}
+  When $\ga$ is irrational,
+  \[ 
+  \abs*{\ga - \frac{p}{q}} <\frac{1}{q^2}
+  \]
+  holds for infinitely many co-prime pairs $(p,q)$.
+\end{corollary}
+
+
+\begin{proof}
+  Toward deriving a contradiction, assume that the corollary holds for
+  only $n$ co-prime pairs, $\{(p_i, q_i)\}^{n}_{i=1}$. Since $\ga \notin \Q,$ for no $i$ does $|q_i\ga-p_i|=0$. 
+  By the Archimedean property, there exists some $M \in \N$ such that
+  $ 1/M < \mbox{min}\{|q_i\ga - p_i|\}_{i\leq N}$. From the previous
+  theorem, we can furnish a $(p_{n+1},q_{n+1})\in \Z \times \set{1,\ldots,M}$ such that
+  \[
+  \abs{q_{n+1}\ga - p_{n+1}}<\frac{1}{M},
+  \]
+  a contradiction of our assumption that there are only $n$ co-prime
+  pairs satisfying the inequality. (If $(p_{n+1},q_{n+1})$ aren't co-prime, we can force them to be by
+  dividing them out by their greatest common divisor.) As $n$ was arbitrarily chosen, we
+  conclude that there are infinitely many co-prime pairs satisfying the inequality of the corollary.
+\end{proof}
+
+\section{Mind Your p's and q's}
+
+The most familiar way by which we approximate irrational numbers is by
+truncating their (infinite) decimal expansion, such as `$2.7128\ldots$' for $e$. Though most of us have ten fingers, \textit{continued fractions} offer a more intrinsic representation of a number than any base expansion. 
+
+\begin{definition}[Continued Fraction]
+  A (simple) \textit{finite continued fraction} is an expression
+  \[
+  a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2+\cfrac{1}{\cdots +
+          \cfrac{1}{a_n}}}}
+  \]
+  on $n+1$ variables: $a_0,a_1,\ldots,a_n$. We stipulate that each $a_i,$ also known as the $i$th partial quotient of $\ga.$ 
+  be an integer and a positive integer for $i\neq0$. $[a_0:a_1,\ldots,a_n]$ is the conventional shorthand for the above expression. An
+  \textit{infinite continued fraction} is defined
+  similarly, except for infinitely many inputs: i.e.,
+  $[a_0:a_1,a_2,\ldots]$.
+\end{definition}
+
+Though not the first to study continued fractions, Leonhard Euler
+(1707-1783) was the first to write about them in a systematic
+fashion. He proved the following in 1737:
+
+\begin{fact}
+  A finite continued fraction is rational; an infinite continued
+  fraction is irrational.
+\end{fact}
+
+The insight for this proof comes from a well-known algorithm for
+converting a real number $\ga$ into a continued fraction. Let
+$\floor{x}$ denote the greatest integer less than or equal to
+$x$.
+\begin{definition}[the Continued Fraction Algorithm]
+We obtain the continued fraction expansion of $\ga$ in this way: Define $a_0 := \floor{\ga}$ and $r_0 := \ga - a_0$. For
+$i \geq 1$, define $a_i := \floor{\frac{1}{r_{i-1}}}$ and
+$r_i := \frac{1}{ r_{i-1}} - a_i$. It is a straightforward exercise to show that if (and only if) $\ga$ is rational, the algorithm terminates at some $k \in \N$ (i.e., $a_{k+1} = 0$). Then $\ga = [a_0:a_1,\ldots,a_k].$ Otherwise $\ga$ is irrational and is equal to the limit $[a_0:a_1,a_2,\ldots].$ 
+\end{definition}
+In either case, the algorithm provides us with some useful
+information at any given step.
+
+
+\begin{definition}[Convergents and Complete Quotients]
+  Let $\ga \in \R$ and let $a_0,a_1,\ldots,a_k$ be the first $k+1$ terms of its continued fraction expansion. We say that
+  the $k$th \textit{convergent} of $\ga$ is the rational
+  $c_n = \frac{p_n}{q_n} = [a_0; a_1,\ldots,a_n]$. The algorithm for
+  computing the $k$th convergent is as follows: fix
+  $c_0 = \frac{a_0}{1}$, $c_1 = \frac{a_1a_0+1}{a_1}$, and for
+  $k\geq2$,
+  \[
+  c_k=\frac{p_k}{q_k}=\frac{a_kp_{k-1}+p_{k-2}}{a_kq_{k-1}+q_{k-2}}
+  \]
+  We say that the $k$th \textit{complete quotient} of $\ga$ is
+  $\gz_k = [a_k; a_{k+1}, \ldots].$ By definition,
+  \[ \gz_k = a_k + \frac{1}{\gz_{k+1}} \implies \gz_{k+1} =
+    \frac{1}{\gz_k - a_k} \]
+  The complete quotient of $\ga$ terminates if and only if $\ga$ is
+  rational.
+\end{definition}
+
+As an example, the first five convergents of $\pi$ are
+$3,\frac{22}{7},\frac{333}{106},\frac{355}{113}, \frac{103993}{332102}$. These are exactly the same as the first five best Diophantine approximations, a fact that generally holds true, which we shall later prove. We note that the
+4th convergent, $\frac{355}{113}$, gives a remarkably good
+approximation to $\pi$ for a relatively small denominator (it estimates $\pi$ to 6 decimal places!). For reasons that we shall see, this fact
+corresponds to the fifth coefficient in its continued fraction
+expansion, $\pi = [3; 7, 15, 1, 292, 1, \ldots]$. 292 dwarfs the other partial quotients. We will see that larger
+coefficients in a number's expansion (conversely, smaller denominators in the
+convergents) correspond to better approximations.
+
+Often, it's easier to work with convergents rather than partial quotients when proving things about continued fractions. We will present three somewhat technical lemmata that we require to prove the main theorems of this section, which follows \cite{GH60}. These lemmata will allow us to calculate the distance between a real number and its $n$th convergent. 
+\begin{lemma}\label{lem:compquotients}
+  Let $\ga \in \R$. Then $\ga = \gz_0$,
+  $\ga = \frac{\gz_1a_0+1}{\gz_1}$, and for $n\geq2$,
+  \[
+    \ga = \frac{\gz_{n+1}p_n+p_{n-1}}{\gz_{n+1}q_n+q_{n-1}}
+  \]
+\end{lemma}
+ 
+\begin{proof}
+  The case for $n=0$ is obvious. For $n=1$, we have
+  $\ga = a_0 + \frac{1}{\gz_1} = \frac{\gz_1a_0+1}{\gz_1}$. We proceed
+  by induction: $n=2$ is the base case:
+  \[
+    \frac{\gz_2p_1+p_0}{\gz_2q_1+q_0}=\frac{\gz_2(a_1a_0+1)+a_0}{\gz_2a_1+1}.
+  \]
+  Then, substituting our formula for the $(n +1)$th complete quotient,
+  we obtain
+  \[
+    \frac{\frac{1}{\gz_1-1}(a_1a_0+1)+a_0}{{\frac{1}{\gz_1-1}a_1+1}} = 
+    \frac{a_1a_0+1+(\gz_1-a_1)a_0}{a_1+\gz_1-a_1}=\frac{\gz_1a_0+1}{\gz_1},
+  \]
+  which we have shown is equal to $\ga$. We invite the reader to undertake the inductive step. 
+\end{proof}
+
+\begin{lemma}\label{lem:3}
+  For all $n\geq1$,
+  \[
+    \frac{p_n}{q_n}-\frac{p_{n-1}}{q_{n-1}} =
+    \frac{(-1)^{n-1}}{q_{n-1}q_n}
+  \]
+\end{lemma}
+\begin{proof}
+  Converting the lefthand side of the equation to a common denominator and substituting for $p_n,q_n$, we get
+  \[
+    \frac{p_n}{q_n}-\frac{p_{n-1}}{q_{n-1}} =
+    \frac{p_{n-2}q_{n-1} +q_{n-1}(a_np_{n-1}) - p_{n-1}(a_nq_{n-1}) - q_{n-1}p_{n-2}}{q_nq_{n-1}}
+    = \frac{p_{n-2}q_{n-1}-p_{n-1}q_{n-2}}{q_nq_{n-1}}
+  \]
+  It is a cumbersome but task to show, working inductively on the continued fraction algorithm, to show that $p_nq_{n-1}-q_np_{n-1} = (-1)^{n-1}(p_1q_0-q_1p_0)=(-1)^{n-1},$ which is sufficient to complete the proof.
+\end{proof}
+
+\begin{lemma}\label{lem:four}
+  \[
+    \abs*{\ga - \frac{p_n}{q_n}} = \frac{1}{q_n(\gz_{n+1}q_n+q_{n-1})}
+  \]
+  As a corollary, we get the following inequality:
+  \[
+  \abs*{\ga - \frac{p_n}{q_n}}\leq \frac{1}{q_nq_{n+1}}
+  \]
+  since $q_{n+1} = a_{n+1}q_n + q_{n-1}.$ 
+\end{lemma}
+\begin{proof}
+  By applying Lemma~\ref{lem:compquotients} and converting to a common denominator, we get
+  \[
+    \abs{\ga - \frac{p_n}{q_n}} =
+    \abs{\frac{(\gz_{n+1}p_n+p_{n-1})q_n}{(\gz_{n+1}q_n+q_{n-1})q_n} -
+      \frac{p_n(\gz_{n+1}q_n+q_{n-1})}{q_n(\gz_{n+1}q_n+q_{n-1})}} =
+    \abs{\frac{p_{n-1}q_n-q_{n-1}p_n}{q_n(\gz_{n+1}q_n+q_{n-1})}}.
+  \]
+  Substituting the formula from Lemma~\ref{lem:3}, we get
+  \[
+    \abs{\ga - \frac{p_n}{q_n}} = \abs{\frac{(-1)^{n-1}}{q_{n-1}q_n}}
+    = \frac{1}{q_n(\gz_{n+1}q_n+q_{n-1})},
+  \]
+  which concludes the proof of our last continued fraction lemma. Incidentally, this lemma, plus the fact that irrational numbers have infinitely many convergents, give another proof of Dirichlet's theorem. 
+\end{proof}
+
+\begin{theorem}[Convergents are Best Diophantine Approximations]\label{thm:best_approx}
+Let $p_n/q_n$ be the $n$th convergent of $\ga$, where $n>1$. Let $p/q\neq p_n/q_n$ be a rational and suppose that $1\leq q < q_{n+1}$. Then
+\[
+\abs{q_n\ga - p_n} < \abs{q\ga - p}
+\]
+\end{theorem}
+\begin{proof}
+We can assume that $(p,q)=1$. From Lemma~\ref{lem:four} , we have that
+\[
+\abs{q_n\ga - p_n} < \abs{q_{n-1}\ga - p_{n-1}},
+\]
+so we can further assume that $q_{n-1} < q < q_n,$ which reduces the problem to showing that $p_{n-1}/q_{n-1}$ is a best Diophantine approximation: the complete theorem follows from a simple reverse-inductive argument. Now if $q=q_n$, then certainly $p\neq p_n$, so
+\[
+\abs*{\frac{p_n}{q_n} - \frac{p}{q_n}}\geq\frac{1}{q_n}.
+\]
+And from Lemma~\ref{lem:four},
+\[
+\abs*{\frac{p_n}{q_n} - \ga}\leq\frac{1}{q_nq_{n+1}}<\frac{1}{2q_n} 
+\]
+since for all $n$ $q_n\geq n.$ An application of the triangle inequality tells us that 
+\[
+\abs*{\frac{p}{q_n}-\ga} > \frac{1}{2q_n}.
+\]
+So 
+\[
+\abs*{\frac{p_n}{q_n} - \ga} < \frac{1}{2q_n} <\abs*{\frac{p}{q_n} - \ga},
+\]
+which proves the theorem for the case $q = q_n$. 
+
+Now suppose that $q_{n-1} < q < q_n$.
+Consider the following system of equations for suitable $\gm, \gn$:
+\[
+\mu p_n + \nu p_{n-1} = p, \quad \mu q_n + \nu q_{n-1} = q.
+\]
+We multiply the former by $q_{n-1}$, the latter by $p_{n-1}$, and subtract them, yielding
+\[
+\mu(p_nq_{n-1} - p_{n-1}q_n)  = pq_{n-1} - qp_{n-1},
+\]
+giving us (after an application of Lemma~\ref{lem:3})
+\[
+\mu = \pm(pq_{n-1} - qp_{n-1}).
+\]
+Similarly, multiplying the first equation by $q_n$, the second by $p_n$, and subtracting them shows that
+\[
+n = \pm(pq_n - qpn).
+\]
+We conclude that $\mu$ and $\nu$ are non-zero integers, since $p/q \neq p_{n-1}/q_{n-1},p_n/q_n$. Our equation for $q$ tells us that $\mu q_n + \nu q_{n-1} = q  < q_n,$ which means $\mu$ and $\nu$ have opposite signs. Recall from Lemma~\ref{lem:four} that 
+\[
+ \ga - \frac{p_n}{q_n} = \frac{(-1)^{n-1}}{q_{n-1}q_n}
+\]
+So 
+\[
+q_n\ga-p_n=\frac{(-1)^{n-1}}{q_{n-1}}, \quad q_{n-1}\ga-p_{n-1} = \frac{(-1)^{n}}{q_{n}}.
+\]
+Since $q_n,q_{n-1}$ are both positive, then $q_n\ga-p_n,q_{n-1}\ga-p_{n-1}$ are of opposite sign. Which is to say that $\mu(q_n\ga-p_n),\nu(q_{n-1}\ga-p_{n-1})$ have the same sign. 
+Therefore:
+\[
+\abs{q\ga - p} = \abs{(\mu q_n + \nu q_{n-1})\ga - \mu q_n + \nu q_n-1} = \abs{\mu(q_n\ga-p_n) + \nu(q_{n-1}\ga - p_{n-1})}.
+\]
+Because the two summands have the same sign, we may break apart the inequality:
+\[
+= \abs{\mu}\abs{(q_n\ga-p_n)} + \abs{\nu}\abs{(q_{n-1}\ga - p_{n-1})} > \abs{\mu}\abs{(q_n\ga-p_n)}.
+\]
+Since $\mu$ is a non-zero integer, 
+\[
+\abs{q\ga-p} > \abs{\mu}\abs{q_n\ga-p_n} \geq \abs{p_n\ga - p_n},
+\]
+which is what needed to be shown.
+\end{proof}
+
+Adolf Hurwitz (1859-1919) proved what is the \textit{tightest} bound
+of approximation we can apply to every irrational, giving the best refinement of Dirichlet's result. His theorem also comes in two parts. 
+
+\begin{theorem}[Hurwitz's Approximation Theorem]\label{thm:hurwitz}
+~
+\begin{enumerate}[(a)]
+  \item For any irrational $\ga$, there exist infinitely many
+    co-prime pairs $(p,q) \in \Z \times \Z_+$ such that
+    \[
+      \abs*{\ga - \frac{p}{q}} < \frac{1}{\sqrt{5}q^2}.
+    \]
+  \item Furthermore, if $c < \frac{1}{\sqrt{5}}$, then there exists some $x \in \R$ such that the inequality
+    \[
+      \abs*{x - \frac{p}{q}} < \frac{c}{q^2}
+    \]
+    holds for only finitely many co-prime pairs $(p,q)$. In other words, $1/\sqrt{5}$ is the optimal bound for (a), for the general statement turns out to be false for any smaller value. 
+  \end{enumerate}
+\end{theorem}
+
+\begin{remark}
+  From Lemma~\ref{lem:four},
+  \[
+    \abs{\ga - \frac{p_n}{q_n}} =
+    \frac{1}{q_n^2(\gz_{n+1}+\frac{q_{n-1}}{q_n})} \lesssim
+    \frac{1}{q_n^2 a_{n+1}}
+  \]
+  since $a_{n+1} < \gz_{n+1} < \gz_{n+1} + \frac{q_{n-1}}{q_n}$. (``$\lesssim$" denotes less-than-but-approximately-equals.) The inequality above becomes tighter for large values of $a_{n+1}$,
+  confirming our intuition that large coefficients in a number's
+  continued fraction expansion correspond to closely-approximating
+  convergents. Obversely, if the coefficients of a number's continued
+  fraction expansion stay low, none of the convergents will
+  approximate the number particularly well. This observation motivates
+  the proof of Hurwitz's theorem.
+\end{remark}
+
+\begin{definition}[the Golden Ratio]
+  Let $\gf = [1; 1, 1,1,\ldots]$. Because its partial quotients are identicial, $\gf$ is equal to each
+  of its complete quotients.  Observe that
+  $1/\gf = \gf - 1 = [0; 1, 1, 1,\ldots]$. This is to say,
+  \[
+    \gf = 1 + \frac{1}{\gf} \implies \gf^2 - \gf - 1 = 0.
+  \]
+  Then the positive root of this polynomial is
+  $\frac{1 + \sqrt{5}}{2} \approx 1.618$.
+\end{definition}
+The first few convergents of $\gf$ are:
+\[
+\frac{1}{1},\frac{2}{1},\frac{3}{2},\frac{5}{3},\frac{8}{5},\frac{13}{8}.
+\]
+Seeding the continued fraction algorithm with $a_i=1$ for all $i$ shows that the convergents of $\gf$ are $f_{n+1}/f_n,$ where $f_n$ is the $n$th Fibonacci number. From the previous remark, we have that
+  \[
+    \abs*{\gf - \frac{p_n}{q_n}} =
+    \frac{1}{q_n(\gz_{n+1}q_n+q_{n+1})}=\frac{1}{q_n(\gf q_n +
+      q_{n-1})} = \frac{1}{q_n^2(\gf - \frac{q_{n-1}}{q_n})}
+  \]
+It follows from the Fibonacci sequence that $q_n = p_{n-1}$.  So
+  \[
+    \frac{1}{q_n^2(\gf - \frac{q_{n-1}}{q_n})} = \frac{1}{q_n^2(\gf -
+      \frac{q_{n-1}}{p_{n-1}})}
+  \]
+  Then, as $n$ goes to infinity, the latter goes to
+  \[
+    \frac{1}{q_n^2(\gf - \frac{1}{\gf})} = \frac{1}{q_n^2(2\gf - 1)} =
+    \frac{1}{q_n^22(\frac{1+\sqrt{5}}{2})-1}=\frac{1}{q_n^2\sqrt{5}}
+  \]
+  So in some sense, this is the derivation of the bound in Hurwitz's theorem. While the continued fraction expansion of $\gf$ appears as simple as it gets, Hurwitz's theorem obliquely implies that $\phi$ is the least `reasonably behaved' of all irrational numbers. In the words of Hardy and Wright, ``[f]rom the point of view of rational approximation, \textit{the simplest numbers are the worst}" (\cite{GH60}, emphasis theirs).
+
+  \begin{proof}[Proof of Theorem~\ref{thm:hurwitz}]
+  ~
+  \begin{enumerate}[(a)]
+  \item Let $\ga$ be an irrational number. We will show that for any three successive convergents of $\ga$, at least one of them satisfies the inequality of Hurwitz's theorem.
+  Let $b_{n+1} = q_{n-1}/q{n}$ for $n\geq 1$. Recall from Lemma~\ref{lem:four} that 
+  \[
+  \abs*{\ga - \frac{p_n}{q_n}} = \frac{1}{q_n(\gz_{n+1}q_n+q_{n-1})} = \frac{1}{\gz_{n+1} + b_{n+1}}.
+  \]
+  Therefore, it is sufficient to prove that 
+  \[
+ \sqrt{5} < \gz_i + b_i 
+  \]
+ for some $i \in \set{n-1,n,n+1}$.
+  
+  Now suppose that $ \gz_i + b_i \leq \sqrt{5}$ is true for $i = n-1,n$. Recall that
+  \[
+  \frac{1}{\gz_n} = \gz_{n-1} - a_{n-1} 
+  \]
+  and, since $q_{n-1} = a_{n-1}q_{n-2} + q_{n-3},$
+  \[
+  \frac{1}{b_n} = \frac{q_{n-1}}{q_{n-2}} = a_{n-1} + \frac{q_{n-3}}{q_{n-2}} = a_{n-1} + b_{n-1}.
+  \]
+  It follows from our supposition that
+  \[
+  \frac{1}{\gz_n} + \frac{1}{b_n} = \gz_{n-1} + b_{n-1} \leq \sqrt{5}.
+  \]
+  We have that $\frac{1}{\gz_n} \leq \sqrt{5} - \frac{1}{b_n}$ from the above and $\gz_n \leq \sqrt{5} - b_n$ by supposition. Hence,
+  \[
+  1 = \gz_n\frac{1}{\gz_n} \leq (\sqrt{5} - b_n)(\sqrt{5} - \frac{1}{b_n}) = 5 - (b_n + \frac{1}{b_n})\sqrt{5} + 1.
+  \]
+  Therefore, 
+  \[
+  \sqrt{5}(b_n + \frac{1}{b_n}) \leq 5 \implies b_n + \frac{1}{b_n} \leq  \sqrt{5}. 
+  \]
+  But $b_n$ is rational, so we have strict inequality in the above. Also, the sequence $(q_n)$ is increasing, so $b_n < 1$.
+ First,
+ \[
+  b_n^2 + 1 < \sqrt{5}b_n \implies b_n^2 + 1 - \sqrt{5}b_n < 0.
+  \]
+Adding $1/4$ to both sides, we obtain
+  \[
+  (\frac{1}{2}\sqrt{5} - b_n)^2 < \frac{1}{4}
+  \]
+  Then
+  \[
+   b_n > \frac{1}{2}\sqrt{5} - \frac{1}{2} = \frac{1}{2}(\sqrt{5} - 1) = \frac{1}{\gf}. 
+  \]
+  If we had that $\gz_i + b_i \leq \sqrt{5}$ were also true for $i = n+1$, we could prove, \textit{mutatis mutandi} that 
+  \[
+  b_{n+1} > \frac{1}{2}(\sqrt{5} - 1).
+  \]
+  Now 
+  \[
+  a_n = \frac{1}{b_{n+1}} - b_n < \frac{1}{2}(\sqrt{5} +1) - \frac{1}{2}(\sqrt{5} -1) = 1.
+  \]
+  But $a_n$ is necessarily a positive integer, running us into a contradiction. We conclude that $\gz_{n+1} + b_{n+1} > \sqrt{5}$, which finishes our proof.
+  \item We will show that  if $c > \frac{1}{\sqrt{5}},$ then there are only finitely many solutions $p/q$ to the following inequality, disproving its general veracity: 
+  \[
+  \abs*{\gf - \frac{p}{q}} < \frac{c}{q^2}.
+  \]
+  This shows that $\frac{1}{\sqrt{5}}$ is the best universal bound.
+  To derive a contradiction, suppose that there are infinitely many co-prime $(p,q)$ for which the inequality holds. 
+  Then there are infinitely many solutions $p$ and $q$ such that
+  \[
+\gf = \frac{p}{q} + \frac{\delta}{q^2}
+  \] 
+  where $\abs{\delta} < c < 1/\sqrt{5}$.
+We re-express the above equality for arbitrary $\gd.$
+ \[
+ \frac{\delta}{q} = q\gf - p.
+ \]
+ Since $\phi = \frac{1 +\sqrt{5}}{2},$ we may split this:
+ \[
+ \frac{\delta}{q} = \frac{1}{2}q + \frac{\sqrt{5}}{2}q - p \implies \frac{\delta}{q} - \frac{\sqrt{5}}{2}q = \frac{1}{2}q - p.
+ \]
+ Squaring both sides,
+ \[
+ \frac{\delta^2}{q^2} - \sqrt{5}\delta + \frac{5}{4}q = (\frac{1}{2}q - p)^2.
+ \]
+ Then
+ \[
+\frac{\delta^2}{q^2} - \delta\sqrt{5} = (\frac{1}{2}q - p)^2 - \frac{5}{4}q^2 = \frac{1}{4}q^2 - pq + p^2 - \frac{5}{4}q^2 = p^2 - pq - q^2.
+ \]
+ Now, the righthand side necessarily comes out to an integer. But for sufficiently large $q$, the lefthand side is less than $1$, a contradiction. It could be that $p^2 - pq  - q^2 = 0$, but this would imply that $(4p^2 - 4pq + q^2) = 5q^2$, or $(2p - q)^2 = 5q^2,$ which cannot be because $2p - q$ is rational. We conclude that there are only finitely many solutions to the above inequality.
+  \end{enumerate}
+  \end{proof}
+
+\begin{remark} Here is an elementary observation on the Littlewood Conjecture that derives from Hurwitz's Theorem. For all $\ga,\gb \in \R$,
+\[
+  \liminf\limits_{n \to \infty}\, n\,\norm{\alpha n} \norm{\beta n}  < \liminf\limits_{n \to \infty} \, n\norm{\alpha n} \frac{1}{n\sqrt{5}}
+  \]
+ since $\abs{n\gb - b} = \norm{n\gb} < 1/\sqrt{5}n$ infinitely often with respect to rationals $b/n$. But for $\norm{\alpha n}$ is at most $1/2$, so
+  \[
+  \liminf\limits_{n \to \infty}\, n\,\norm{\alpha n} \norm{\beta n} < \liminf\limits_{n \to \infty} \frac{1}{2} \frac{1}{\sqrt{5}} = \frac{1}{2\sqrt{5}}.
+  \]
+\end{remark}
+
+We can restate Dirichlet's theorem like so: for any $\ga$ in $\R,$ there exist infinitely many positive integers $q$ such that
+\[
+q\norm{qx} \leq 1
+\]
+
+In these terms, Hurwitz's theorem tells us, in fact
+\[
+q\norm{qx} \leq \frac{1}{\sqrt{5}}
+\]
+infinitely often, and that we cannot replace $1/\sqrt{5}$ with some smaller $c,$ or we can supply points (such as $\gf,$ its integer translates, and integer multiples) that contravene the new bound. There are, in fact, uncountably many numbers that share this property, the \textit{badly-approximable} numbers. 
+
+\begin{definition}[Badly Approximable Numbers]
+We define the set of badly-approximable numbers, or $\mathbf{BA}$  to be
+\[
+\mathbf{BA} = \set{x \in \R : \inf_{n\in \N}n\norm{nx} > 0}  
+\]
+\[
+= \set{x \in \R : c(x) := \liminf_{n\in \N}n\norm{nx} > 0}.
+\]
+We can think of $c(x)$ as an approximation constant that is non-zero only for $x \in \mathbf{BA}$; Hurwitz's theorem tells us that $c(x) \leq 1/\sqrt{5}.$ The complement of $\mathbf{BA}$  are the well-approximable numbers or $\mathbf{WA} = \set{x\in\R:c(x)=0}.$ An equivalent definition is
+\[
+\mathbf{WA} = \set{x \in \R : (\forall c > 0) \abs*{x - \frac{a}{n}} < \frac{c}{n^2} \; \mbox{i.o.}}.
+\]
+(Throughout we use $\mbox{i.o.}$ denotes `infinitely often,' which in this case is taken with respect to $(a,n) \in \Z\times\N$.) 
+\end{definition}
+
+The only numbers $\ga,\gb$ for which the Littlewood Conjecture can possibly hold false are pairs within $\mathbf{BA}$: to wit, suppose that for some $\ga, \gb$, we have that 
+\[
+\inf_{n \in \N} n\norm{\alpha n} \norm{\beta n} = c > 0.
+\]
+Recalling that $\norm{\ga n} \leq 1/2,$ it follows that
+\[
+\inf_{n \in \N} \norm{\beta n}  \leq \frac{2c}{n},
+\]
+implying that $\gb$ is badly-approximable. A similar argument shows that $\ga \in \mathbf{BA}$ as well. 
+
+It turns out that there is a beautiful connection between the elements of $\mathbf{BA}$ (incidentally, an uncountable set, see \cite{GH60}) and their characterizations as continued fractions . Our proof here follows \cite{BRV16}.
+
+\begin{lemma}~\label{lem: boundedcf}
+Let $x$ be an irrational. Then $x$ is badly-approximable if and only if the partial quotients of its continued fraction expansion $[a_0; a_1, a_2, \ldots]$ are bounded.
+\end{lemma}
+\begin{proof}
+We must show that
+\[
+x \in \mathbf{BA} \iff (\exists M \in \N) (\forall i) \; a_i \leq M.
+\]
+Recall that Lemma~\ref{lem:four} gives us the distance between $x$ and its $n$th convergent:
+\[
+\abs*{x - \frac{p_n}{q_n}} = \frac{1}{q_n(\gz_{n+1}q_n + q_{n-1})}
+\]
+The continued fraction algorithm tells us that $q_{n+1} = a_{n+1}q_n + q_{n-1},$ and we saw in Lemma 6 that $a_{n+1} + 1 \geq \gz_{n+1}.$ Therefore $a_{n+1}q_n + q_n + q_{n-1} \geq \gz_{n+1}q_n + q_{n-1},$ which is to say that
+\[
+q_{n+1} + q_n \geq \gz_{n+1}q_n + q_{n-1}.
+\]
+Thus
+\[
+\frac{1}{q_n(q_{n+1} + q_n)} \leq \abs*{x - \frac{p_n}{q_n}}. 
+\]
+Putting the two bounds together, 
+\[
+\frac{1}{q_n(q_{n+1} + q_n)} \leq \abs*{x - \frac{p_n}{q_n}} < \frac{1}{q_nq_{n+1}}.
+\]
+Some manipulation shows that
+\[
+\frac{1}{q_n^2(\frac{q_n+1}{q_n}+1)} < \abs*{x - \frac{p_n}{q_n}} < \frac{1}{q_n\frac{q_{n+1}}{q_n}},
+\]
+implying
+\[
+\frac{1}{q_n^2(a_{n+1} + 2)} \leq \abs*{x - \frac{p_n}{q_n}} < \frac{1}{a_{n+1}q_n^2}.
+\]
+First, suppose that $x \in \mathbf{BA}.$ Then $c(x),$ as defined above, is greater than zero. The above implies that (multiplying through by $q_n^2$)
+\[
+c(x) \leq q_n\norm{q_nx} < \frac{1}{a_{n+1}}.
+\]
+Taking reciprocals, we get that
+\[
+a_{n+1} < \frac{1}{c(x)},
+\]
+which is of course a bounded quantity. So for every number $i,$ $\abs{a_i} \leq \max\set{\abs{a_0},1/c(x)}.$
+
+Conversely, suppose that there exists $M \in \N$ bounding all partial quotients of $x$. Let $q \in \N.$ Because convergents are best approximations (Theorem~\ref{thm:best_approx}), there exists $n \geq 1$ such that $q_{n-1} \leq q < q_n$ and
+\[
+\abs*{x - \frac{p}{q}} \geq \abs*{x - \frac{p_n}{q_n}} > \frac{1}{q_n^2(a_{n+1} + 2)} > \frac{q^2}{q_n^2}\frac{1}{q^2(M + 2)}.
+\]
+Now, by supposition on $q,$ 
+\[
+\frac{q}{q_n} \geq \frac{q_{n-1}}{q_n} = \frac{q_{n-1}}{a_nq_{n-1} + q_{n-2}},
+\]
+from the CF algorithm. Thus
+\[
+\frac{q}{q_n} \geq \frac{1}{M+1}.
+\]
+We substitute it back in. Then,
+\[
+\abs*{x - \frac{p}{q}} > \frac{1}{q^2(M + 2)} \frac{1}{(M+2)^2},
+\]
+implying that $c(x) > 0$ and that $x \in \mathbf{BA},$ completing the proof.
+\end{proof}
+
+One of the defining characteristic of $\gf$ is that it is equal to each of its complete quotients. That is,
+\[
+\gf = 1 + \frac{1}{\gf},
+\]
+which gives us the quadratic $\gf^2 - \gf - 1 = 0.$ $\gf$ is the positive root of a quadratic (thence the root 5 in its evaluation and in Hurwitz's bound). That the archetypical badly-approximable number is a `quadratic surd,' or irrational algebraic number of degree two, is no coincidence.  In 1737, Leonhard Euler (1707 - 1783) proved that a periodic continued fraction is a quadratic surd, which is to say, a real solution to a second-degree polynomial. Joseph-Louis Lagrange (1736 - 1813) proved the converse in 1770. \cite{AMR92} presents the proofs of these (intricate) theorems in full detail; we will satisfy ourselves with a crude heuristic that makes this fact plausible. Observe that if $\xi$ is a periodic continued fraction, then
+\[
+\xi = \frac{1}{\mbox{finite number of partial quotients} + \frac{1}{\xi}},
+\]
+in which case, we would expect (after some manipulation) to be able to express $\xi$ in terms of its reciprocal, a fundamentally \textit{quadratic} relation. An elegant fact follows from this. 
+
+\begin{fact}
+Every quadratic irrational is badly-approximable. Because quadratic irrationals have periodic continued fraction expansions, their partial quotients are bounded, which implies their bad-approximability. 
+\end{fact}
+
+In Hurwitz's Theorem, we saw that $\gf,$ as a root of the polynomial $x^2 - x -1,$ is the 'pathological' point  motivating bound in the inequality
+\[
+q\norm{qx} < \frac{1}{\sqrt{5}}.
+\]
+The proof of part (b) would have worked had we substituted in the other root of $x^2 - x -1,$ namely $-\gf + 1.$ As it turns out, $\frac{1}{\sqrt{5}}$ is the first member of a fascinating set of numbers that further tie quadratic surds to approximation of continued fractions.
+
+\begin{definition}[the Lagrange Spectrum]
+For all $x \in R\\\set{\gf, -\gf + 1}$, the inequality
+\[
+q\norm{qx} < \frac{1}{\sqrt{8}}
+\]
+holds for infinitely many integers $q$, and $\frac{1}{\sqrt{8}}$ cannot be decreased if $x$ is a solution to the quadratic equation $x^2 + 2x -1.$ Otherwise, there are infinitely many integer solutions of 
+\[
+q\norm{qx} < \frac{5}{\sqrt{221}}, 
+\]
+a bound which cannot be improved for roots of $13x^2 + 29x -13 = 0,$ and so forth. 
+This family of quadratic forms gives rise to the Lagrange Spectrum, $\set{\frac{1}{\sqrt{5}}, \frac{1}{\sqrt{8}}, \frac{5}{\sqrt{221}}, \frac{13}{\sqrt{1517}},\ldots}$ which tends to $\frac{1}{3}.$ A curious reader may consult \cite{Cas57} and \cite{AMR92} for the particulars on how these numbers arise.
+\end{definition}
+
+Besides degree two surds, it is unclear which numbers belong to $\mathbf{BA},$ which is nonetheless an uncountable set.
+
+\begin{conjecture}[the Folklore Conjecture]
+The only algebraic irrationals in $\mathbf{BA}$ are the quadratic irrationals \cite{BRV16}.
+\end{conjecture}
+
+At any rate, it's unclear whether or not even cubic irrationals have any connection to periodic continued fractions. In this light, the 1955 result of Cassels and Swinnerton-Dyer, that numbers belonging to the same \textit{cubic field} satisfy the Littlewood Conjecture, raises further questions.  
+
+\section{Measure for Measure}
+
+\begin{definition}[Very Well-Approximable Numbers]
+We say that a number $x \in \R$ is very well-approximable if belongs to the set $\mathbf{VWA},$ defined as follows: $\ge > 0$ and infinitely many pairs $(a,n)$ such that
+\[
+\mathbf{VWA} := \set{x\in\R:(\exists \ge > 0) \abs*{x - \frac{a}{n}} < \frac{1}{n^{2 + \ge}}\;\mbox{i.o.}}.
+\]
+\end{definition}
+
+Perhaps superficially, this doesn't seem like a very different set from $\mathbf{WA}.$ For any $x$ in $\mathbf{WA}\cup\mathbf{VWA},$ $c(x) = 0.$ But in $\mathbf{VWA},$ the distance between a number and its approximations goes to zero particularly fast--faster than quadratically. This extra condition has the ramification that, whereas $\mathbf{WA}$ has full measure in $\R,$ $\mathbf{VWA}$ is a zero-measure set. The remainder of this chapter will be dedicated to a proof of this fact.
+
+(There is an even more stringent family of numbers (with no name that I am aware of), the set of irrational $x \in \R$ such that for every $n \in \N,$ for some $p,q \in \Z$ with $q \neq 1,$
+\[
+\abs*{x - \frac{p}{q}} < \frac{1}{q^n}.
+\]
+Joseph Liouville (1809-1882) proved in 1844 that a number satisfying this inequality cannot be the root to a polynomial of degree $> 0.$ In doing so, he proved the existence of transcendental numbers, a set to which nearly every number belongs.  See \cite{GH60} for the proof of this fascinating and monumental theorem.)
+
+We will assume that the reader has a basic grasp of measure theory.
+\begin{lemma}[the First Borel-Cantelli Lemma]
+Let $(X, \Sigma, \mu)$ be a measure space, and let $(E_n)^{\infty}_{n=1} =: (E_n)$ be a sequence of subsets in $\Sigma.$ If the summed measure of $(E_n)$ is finite, that is,
+\[
+\sum_{n=1}^{\infty} \mu(E_n) \leq M
+\]
+for some $M \in \R_+$, then
+\[
+\mu (\limsup \limits_{n \to \infty} E_n) = \mu (\bigcap_{n \in \N} \bigcup_{k \geq n}^\infty E_k) = 0.
+\]
+\end{lemma}
+The limit supremum of a sequence of subsets are the points which appear in $(E_n)$ infinitely often. Therefore, in less formal terms, the first Borel-Cantelli lemma tells us that the `events' recurring infinitely in a sequence with finite summed measure must have zero measure. 
+\begin{proof}
+Measure is monotone: if $A \subseteq B$ then $\mu(A) \leq \mu(B).$ Therefore, for every $n \in \N,$
+\[
+\mu(\bigcap_{n \in \N} \bigcup_{k \geq n} E_k) \leq \mu(\bigcup_{k \geq n}^\infty E_k) \leq \sum_{k \geq n}^{\infty} \mu (E_k),
+\]
+which is a bound on $\mu(\limsup \limits_{n\to\infty}(E_n))$ holding true for any $n$. Now by assumption, $\sum_{n=1}^{\infty} \mu(E_n) \leq M$, so evidently the tail end of the series must go to zero as $n$ goes to infinity. Then
+\[
+\lim \limits_{n \to \infty} \sum_{k \geq n}^{\infty} \mu (E_k) = 0,
+\]
+which shows that $\mu(\limsup \limits_{n\to\infty}(E_n)) = 0.$
+\end{proof}
+
+Does a direct converse of the first Borel-Cantelli lemma hold? One might \textit{expect} that if a sequence of subsets in a measure space has unbounded measure, then the limit supremum of the sequence has full measure. As it turns out, this statement is false. Consider $(E_n) = ([0,1], [0, 1/2], [0,1/3], \ldots)$ as a sequence on the unit interval $I$. The summed measure (length) of this harmonious sequence diverges, yet $\limsup\limits_{n \to \infty} E_n = \set{0},$ a zero-measure singleton. However, if we strengthen the conditions on $(E_n)$, we obtain a partial converse to the above lemma.
+
+We say that two sets $A,B \in \Sigma$ are independent if 
+\[
+\mu(A \cap B) = \mu(A)\mu(B).
+\]
+Note that the counterexample above does \textit{not} possess this property.
+
+\begin{lemma}[the Second Borel-Cantelli Lemma]
+Let $(E_n)$ be a sequence of independent subsets of a probability space (i.e., a finite measure space normalized to have a total measure of 1). In particular,
+\[
+\mu(\bigcap_{n \in \N}(E_n)) = \prod_{n \in \N} \mu(E_n).
+\]
+
+If
+\[
+\sum_{n=1}^\infty \mu(E_n) > M
+\]
+for all $M > 0$, then
+\[
+\mu (\limsup\limits_{n \in \N}(E_n)) = 1.
+\]
+\end{lemma}
+\begin{proof}
+We will show that the complement of $\limsup\limits_{n \to \infty} (E_n)$ has zero measure. By DeMorgan's Law,
+\[
+(\limsup_{n \to \infty} E_n)^C = (\bigcap_{n \in \N} \bigcup_{k \geq n} E_k)^C = (\bigcup_{n \in \N} \bigcap_{k \geq n} E^C_k).
+\]
+This latter set is the set of points that appear outside of $E_n$ all but finitely often, which is to say, $\liminf \limits_{n \to \infty} E_n^C).$ With this in mind, toward our proof it suffices to show that $\mu (\bigcap_{k\geq n} E_k^C = 0$ for every $n$, since a countable union of zero-measure sets has measure zero. Now
+\[
+\mu (\bigcap_{k\geq n} E_k^C) = \lim \limits_{M \to \infty} \mu(\bigcap_{k = n}^M E_k^C), 
+\]
+which by assumption of independence comes out to
+\[
+\lim_{M \to \infty} \prod_{k = n}^M \mu(E_K^C)
+\]
+because (we assert) independence of $(E_k)$ implies independence of $(E_k^C).$ Given the inequality $1 - x \leq e^{-x},$ we deduce that 
+\[
+\lim_{M \to \infty} \prod_{k = n}^M \mu(E_k^C) \leq \lim_{M \to \infty} \prod_{k = m}^M e^{-\mu(E_k)} = \lim_{M \to \infty} e^{-\sum_{k = n}^M \mu(E_k)}.
+\]
+By hypothesis, $\sum_{k = 1}^{\infty} \mu(E_k)$ diverges, so certainly $\sum_{k = n}^M \mu(E_k)$ diverges as $M$ goes to infinity. Hence
+\[
+\mu(\bigcap_{k \geq n}^\infty E_k^C) = \lim_{M \to \infty} e^{-\sum_{k = n}^M \mu(E_k)} = 0,
+\]
+which proves that $\liminf \limits_{n \to \infty} E_k^C$ has measure zero, completing the proof. 
+\end{proof}
+
+With these lemma, we can begin to prove some measure-theoretic properties of the sets $\mathbf{VWA}$ and $\mathbf{BA}.$
+
+\begin{theorem}~\label{thm: measure_vwa}
+The set of very well-approximable numbers has measure zero. 
+\end{theorem}
+\begin{proof}
+For $\ge > 0,$ we define the set
+\[
+V(\ge) = \set{x \in [0,1] : \abs{x - \frac{a}{n}} < \frac{1}{n^{2 + \ge}}\,\mbox{i.o.}}
+\]
+that is, infinitely often with respect to co-prime pairs $(a,n)$. Then $\mathbf{VWA} = {\bigcup_{k \in \N} V(1/k)}.$ So it suffices, toward finishing the proof, to show that $V(1/k)$ has measure zero for any choice of $k$. So we fix $k$, and define, for $n\in \N,$
+\[
+E_n(k) = E_n := \bigcup_{a \leq n} \set{x \in [0,1] : \abs*{x - \frac{a}{n}} < \frac{1}{n^{2 + \frac{1}{k}}}}
+\]
+Then 
+\[
+V(1/k) = \limsup \limits_{n \to \infty}(E_n).
+\]
+Now for each $n$, 
+\[
+\mu(E_n) \leq \sum_{a \leq n} \frac{1}{n^{2 + \frac{1}{k}}} = \frac{1}{n^{1+\frac{1}{k}}}.
+\]
+Therefore,
+\[
+\sum_{n=1}^{\infty} \mu(E_n) \leq \sum_{n=1}^{\infty} \frac{1}{n^{1+\frac{1}{k}}}.
+\]
+But the latter series converges, so $\sum_{n=1}^{\infty} \mu(E_n)$ is bounded. By the first Borel-Cantelli Lemma, 
+\[
+\mu(V(1/k)) = \mu(\limsup\limits_{n\to \infty} E_n) = \mu(\set{x}) = 0. 
+\]
+Thus $\mu(\mathbf{VWA}\cap[0,1]) = 0.$ This is sufficient to conclude that almost every real number $x$ is \textit{not} very well approximable: $\R$ is a countable union of integer translates of $I = [0,1],$ and addition by an integer does not affect its Diophantine properties.
+\end{proof}
+ 
+ \begin{theorem}~\label{thm: measure_ba}
+ The set of well-approximable numbers has full measure and its complement, the set of badly-approximable numbers, has zero measure.
+ \end{theorem}
+ \begin{corollary}[Corollary to Theorem~\ref{thm: measure_ba}]
+ The set of points in $\R^2$ that violate the Littlewood Conjecture has measure zero.
+ \end{corollary}
+\begin{remark}
+Restricting our attention again to the unit interval, recall that 
+\[
+\mathbf{WA}\cap[0,1] = \bigcap_{k \in \N} \set{x \in [0,1] : \abs*{x - \frac{a}{n}} < \frac{1}{kn^2}\;\mbox{i.o.}} =: \bigcap_{k \in \N}U_k.
+\]
+It would be enough to show that for each $n$, $\mu(W_k) = 1.$ Then 
+\[
+U_k = \limsup \limits_{n \to \infty} \bigcup_{a \leq n} \set{x \in [0,1] : \abs*{x - \frac{a}{n}} < \frac{1}{kn^2}} =: \limsup \limits_{n \to \infty} F_n.
+\]
+We would want to be able to apply the second Borel-Cantelli Lemma, and it can be shown that $\sum_{n=1}^\infty F_n$ diverges. However, the successive $F_n$ are not independent since, for $n' > n$, $F_n \subset F_{n'}.$ We could attempt to prove instead that $\mu(\mathbf{BA}) = 0,$ but this involves measuring the limit inferior of a sequence of sets, which we don't have any useful theorems about.  
+\end{remark}
+The following theorem is due to Aleksandr Ya. Khinchin (\cite{BRV16}). As a preliminary, given a sequence $\psi : \N \to \R^+,$ we define a number $x$ to be $\psi$-approximable if there exist infinitely many $q \in \N$ such that $\norm{qx} < \psi(q).$ Furthermore, we define
+\[
+W(\psi) := \set{x \in [0,1] : \norm{qx} <  \psi(q)\;\mbox{i.o.}}.
+\]
+
+\begin{theorem}[Khinchin's Approximation Theorem]
+Khinchin's theorem is the following: whenever $\psi$ is monotone, 
+\[
+\mu(W(\psi)) = 
+\begin{cases}
+0 \quad \mbox{if}\quad \sum_{q=1}^\infty \psi(q) < \infty,\\
+1 \quad \mbox{if} \quad \sum_{q=1}^\infty \psi(q) = \infty.
+\end{cases}
+\]
+\end{theorem}
+
+These two branches of above expression are sometimes called the convergent and divergent case of Khinchin's Theorem. The convergent case follows immediately from the first Borel-Cantelli Lemma, but the proof of the divergent case is is too involved to be reproduced here. The latter case allows us to prove that $\mu(\mathbf{BA}) = 0,$ but before we do so, we make two remarks. 
+
+First, in terms of this new notation, Dirichlet's Approximation Theorem implies that
+\[
+ W(q^{-1}) = [0,1].
+\]
+This fact certainly agrees with the convergent case of Khinchin's theorem: the harmonic series diverges, implying that $\mu(W(q^{-1})) = 1.$ Another way to look at it is this: if $\psi$ is of the form $\psi:q \mapsto q^{-\gt}$ for some $t > 0,$ we define $W(\gt) := W(\psi),$ and call this set the \textit{$\gt$-well approximable numbers.} Dirichlet's theorem informs us that every number is 1-well approximable. 
+
+Secondly Khinchin's theorem tells us that for every $\gt > 1,$ $W(\gt)$ is a set of zero measure (and $\mathbf{VWA}$ is a countable union of zero measure $W$-sets; therefore it has zero measure itself). But consider the pair $W(2), W(100).$ Clearly the former is contained in the latter, and we would intuitively expect $W(q^{-100})$ to be a smaller set, for its membership criterion is stricter. But Khinchin's theorem tells us nothing about the relative size of the two, only that both have zero measure. It turns out that there is a more refined notion of a set's size than Lebesgue measure, which affords us a refinement (of sorts) of Khinchin's theorem. In the very last section of this paper (4.5), we will revisit this matter. 
+
+\begin{proof}[Proof of Theorem~\ref{thm: measure_ba}]
+Picking up where we left off, let 
+\[
+W_k = \limsup \limits_{n \to \infty} \set{x \in [0,1] : \norm{nx} < \frac{1}{kn}} = \limsup \limits_{n \to \infty} F_n.
+\]
+Observe that this set corresponds to $W(\psi)$ for $\psi(n) = \frac{1}{kn}.$ Since $\sum_{n = 1}^\infty \psi(n)$ diverges, Khinchin's theorem tells us that $\mu(W(\psi)) = 1.$ But $W_k$ is just a reformulation of $U_k.$ So
+\[
+\mu(\mathbf{WA}) = \mu(\bigcap_{k \in \N} U_k) = \mu(\bigcap_{k \in \N} W_k) = 1,
+\]
+since the intersection of countably many sets with full measure has full measure. We conclude that $\mathbf{WA}$ has full measure in $[0,1],$ and by extension, full measure in $\R.$
+\end{proof}
+
+\chapter{Ergodic theory}
+%parabolic actions:rotations::hyperb:expansions
+\section{A Dynamical Duo}
+
+In terms of classical mechanical physics, `dynamical' refers to a system of equations of motion modeling the evolution of a working system. The mathematical study of dynamical systems arose in the late 19th century, particularly in the work of Poincar\'e and Lyapunov, as a method to investigate (respectively) the three-body problem in celestial mechanics and the stability of fluid particles. As one might expect, mathematical dynamics borrows much of its terminology from physics. 
+
+
+The barest definition of a dynamical system is a pair $(X, T)$, where $X$ is a nonempty set and $T:X\to X$ a map. We think of $T$ as describing immediate change in the system, whereas change over the `time' parameter $t$ gives us the composition $T^t,$ thus modeling the long-term behavior of $X.$ For non-invertible mappings, $t$ belongs to $\Z^+$ in discrete systems and to $\R^+$ is continuous systems, or flows. (if $T$ is invertible, then the moving `backwards in time' makes sense, and we draw $t$ from $\Z$ and $\R.$) We can think of dynamical systems as a (semi-)group action on their associated spaces. If $G$ is the parametrizing (semi-)group, then
+\[
+G\curvearrowright X: (t,x) \mapsto T^t(x).
+\]
+Obviously the action is compatible ($T^s \circ T^t(x) = T^{s+t}(x)$) and has an identity ($T^0(x) = x$). 
+
+We'll introduce the the fundamental concepts of dynamics through two simple, canonical examples. Note that both of these examples will be \textit{discrete} systems. 
+
+\begin{example}[Circle Rotation]
+Let our space be the one-dimensional torus $\T = [0,1]/\sim,$ which is the circle obtained by gluing the ends of the unit interval together. Let $\ga \in \R.$ Then $R_\ga : \T \to \T$ defines the map that rotates a point on the torus by an angle of $2\pi \ga$ degrees. Equivalently,
+\[
+R_\ga{x} = x + \ga \,\mbox{(mod 1)}
+\]
+Note that $R_\ga$ is an invertible map, which is not generally the case for dynamical systems.
+\end{example}
+
+
+We say that the \textit{orbit} of a point $x$ in a dynamical system $(X,T)$ is the union of the positive (forward) and negative (backward) semiorbits of $x$, or
+\[
+\mathcal{O}_T(x) = \mathcal{O}_T^+(x) \cup \mathcal{O}_T^-(x) = \bigcup_{t \geq 0} T^t(x) \cup \bigcup_{t \leq 0} T^t(x).
+\]
+If $T^t(x) = x$ for some $m>0$, then we say that $x$ is $m$-periodic. $x$ is fixed if $T^t(x) = x$ for all $t.$ A subset  $A\subset X$ is \textit{forward invariant} if $T^t(A) \subset A$ for all $t \geq 0$ and \textit{backward invariant} if $T^t(A) \subset A$ for all $t \leq 0.$ In general, closures forward orbits are forward invariant and closures of backward orbits are backward invariant. 
+
+\begin{theorem}
+Under circle rotation, the orbit of every $x\in \T$ is periodic whenever $\ga$ is rational. If $\ga$ is irrational, then every orbit is dense in $\T$ when $\ga$ is irrational.
+\end{theorem}
+
+\begin{proof}
+First, suppose that $\ga$ is some rational $p/q.$ Then, for any $x \in \T,$ 
+\[
+R_\ga ^q(x) = x + q(p/q) \, \mbox{(mod 1)} = x + p = x.
+\]
+Therefore every $x$ is $q$-periodic. In fact, the set 
+\[
+Y(x) = \set{x + a/q\,:\,1\leq a \leq q} = \mathcal{O}_{R_\ga}(x)
+\]
+is invariant with respect to $R_\ga.$
+
+%I suggest you follow your heart here.
+Now suppose $\ga$ is irrational. Let $\ge > 0.$ By the Archimedean property, there exists a positive integer $N$ such that $1/N < \ge.$ By Dirichlet's approximation theorem, there exists a pair of positive integers $p,q$ such that 
+\[
+\abs{q\ga - p} < \frac{1}{N} < \ge.
+\]
+We may assume that $p$ is optimally chosen, so that
+\[
+\abs{q\ga -p} = \norm{q\ga} = q\ga \, \mbox{mod 1}.
+\]
+Then
+\[
+R_\ga ^ q (0) = 0+ q\ga \, \mbox{mod 1} < x + \frac{1}{N} < x + \ge,
+\]
+which implies that $R_\ga ^q$ is a rotation by some angle less than $\ge.$ As $\ge$ was arbitrarily chosen, it follows that that we can produce rotations via $R_\ga$ that are as small as we please. Therefore, for any $x,$ $\mathcal{O}_{R_\ga}(x)$ is dense in $\T.$
+\end{proof}
+
+ If $\ga$ is a rational $p/q$, then any set $Q$ of $q$ points distributed evenly across $\T$ by arc length $2\pi/q$ is $R_\ga$ invariant, both ways. $Q$ is an example of a \textit{minimal} invariant set, for there are no proper, non-empty, closed, and mapping-invariant subsets of $Q.$ However, rotation by irrational $\ga$ is dense in $\T,$ so it follows that the only invariant subset (and thus, minimal) is $\T$ itself. In this sense, we can call the mapping given by irrational rotations of the circle minimal.
+
+The following dynamical system is analogous to multiplication in the way that circle rotation was to addition. Its properties are generally more intricate.
+
+\begin{example}[Circle Expansion]
+Let $m \in \Z^+.$ Letting $\T$ be our space as before, consider the map $E_m$ where
+\[
+E_m(x) = mx \,\mbox{(mod 1)}.
+\]
+Another way of notating this system is as $\times m.$ 
+\end{example}
+
+This map is not invertible, since for every $x\neq 0$, $E_m^{-1}(x)$ contains $m$ points. For instance, when $m=2,$ $E_m^{-1}(1/2) = \set{1/4, 3/4}.$ Additionally, $E_m$ does not preserve the distance between points as it iterates, but rather increases (locally) them by a factor of $m$ (mod 1). Whether or not a point $x$ is fixed or periodic depends on its  base-$m$ expansion. We make use of the following observation: if $0.a_1a_2a_3\ldots$ is an arbitrary base $m$ decimal, then $E_m(0.a_1a_2a_3\ldots) = a_1.a_2a_3\ldots \, \mbox{(mod 1)} = .a_2a_3\ldots$. In fact, circle expansions are isomorphic to the `right shift' action on infinite strings in an alphabet of $m$ characters, the latter being a \textit{symbolic} dynamical system. Here's a concrete illustration. Fix the expansion factor as $m = 3$ and assume all decimals presented below are in base 3. An example of a fixed point under $\times3$ is $x_1 = 0.1111\ldots$. See that
+\[
+E_3(x_1) = E_3(0.11\bar1) = 1.11\bar1 \ldots \, \mbox{(mod 1)} = 0.11\bar1\ldots = x_1
+\]
+Similarly, for an example of a 2-periodic point, let $x_2 = 0.\overline{12}$. Observe,
+\[
+E_3^2(x_2) = E_3\circ E_3(.\overline{12}) = E_3(1.2\overline{12}\,\mbox{(mod 1)}) = E_3(.2\overline{12}) = .\overline{12} = x_2.
+\]
+
+One striking difference between circle rotation and expansion is that in the latter, there exist both periodic points and points with dense orbit (as we shall see below) in the same mapping $E_m$, whereas in the former only on or the other is present (depending on whether rotation is rational). In this framework, $R_\ga$ is the more \textit{rigid} system of the two. 
+
+We construct a point with dense orbit under $\times m$ as follows. For each integer $m,$ we define the \textit{base-$m$ enumeration} as follows:
+\[
+\mathcal{F}_m = \bigcup_{k=1}^{\infty} \set{0,1,\ldots,m-1}^k
+\]
+In words, $\mathcal{F}_m$ is the (countable) set of all finite strings base $m.$ We may enumerate its elements: $\mathcal{F}_m = {w_0, w_1, w_2,\ldots}.$ For instance, the first few elements of $\mathcal{F}_2$ are
+\[
+\set{(0), (1), (0,0), (0,1), (1,0), (1,1), (0,0,0) \ldots}.
+\]
+
+A set $A$ is dense in [0,1] if and only if for each $w \in \mathcal{F}_m$ there exists some $x(w) \in A$ whose base-$m$ expansion begins with $w.$ For instance,
+\[
+A = \set{0, 0.1, 0.01, 0.11, 0.001, 0.011, 0.101, 0.111, \ldots}
+\]
+is dense in $[0,1].$ (We have ommitted redundant expressions in $\mathcal{F}_m$ of the same number, namely those with trailing zeros.) Therefore we may construct a point $z \in [0,1]/\sim = \T$ with a dense orbit by \textit{concatenating} each $x \in A$ into a single base-$m$ expansion. That is, 
+\begin{theorem}
+\[
+z = \lim\limits_{i \to \infty} 0.w_0w_1\ldots w_i \in \T, \, w_i \in \mathcal{F}_m
+\]
+is dense in $\T$ under the mapping $E_m.$ 
+\end{theorem}
+\begin{proof}
+Let $x \in \T$ and let $\ge > 0.$ We will show that for some positive integer $n,$ $\abs{E_m^n(z) - x} < \ge.$ For some $k,$ it must be that $1/m^k < \ge.$ We consider the base-$m$ expansion of $x$ . Let $l$ denote the (possibly infinite) length of the base-$m$ expansion of $x.$
+
+First, we suppose that $l \leq k.$ We have that $x = 0.a_1\ldots a_l,$ (where each term $a_i \in \set{0,1,\ldots,m-1}$) We define $\bar{x} = 0.a_1\ldots a_l \ast_{i=1}^{k-l}(0) 1,$ where $\ast_{i=1}^{k-l}(0)$ denotes 0 concatenated $k-l$ times. $\bar{x}$ is a finite base-$m$ string, so for some $j,$ $\bar{x} = w_j \in \mathcal{F}_m.$ Then, by construction of our `dense point' $z,$ for some $n,$ $E_m^n(z) = 0.w_jw_{j+1}w_{j+2}\ldots.$ It follows that 
+\[
+\abs{E_m^n(z) - x} = \abs{(0.w_jw_{j+1}\ldots) - x} = \abs{(0.a_1\ldots a_l \ast_{i=1}^{k-l}(0)1w_{j+1}\ldots) - 0.a_1\ldots a_l} 
+\]
+\[
+= \abs{0.\ast_{i=1}^{k}(0)1w_{j+1}\ldots} \leq \abs{0.\ast_{i=1}^{k-1}(0)1} = \frac{1}{m^{k}},
+\]
+which is, by assumption, less than $\ge.$ Next, we suppose that $l > k,$ which includes the case where $x$ has an infinite base-$m$ expansion.  Then we define $\bar{x} = 0.a_1\ldots a_k,$ where $(a_i)_{i=1}^{i = k}$ are the first $k$ terms of the base-$m$ expansion of $x.$ Again, $\bar{x}$ is a finite sequence base-$m,$ so for some $j,$ $\bar{x} = w_j \in \mathcal{F}_m.$ Thus for some $n,$ $E_m^n(z) = 0.w_jw_{j+1}w_{j+2}\ldots.$ Therefore
+\[
+\abs{E_m^n(z) - x} = \abs{(0.w_jw_{j+1}\ldots) - x} = \abs{0.a_1\ldots a_k - 0.a_1\ldots a_ka_{k+1}\ldots}
+\]
+\[
+= \abs{0.\ast_{i=1}^{k}(0)a_ka_{k+1}\ldots} \leq \abs{0.\ast_{i =1}^{k-1}1} = \frac{1}{m^{k}},
+\]
+a value less than $\ge,$ thus completing our proof. 
+\end{proof}
+
+We say that the circle expansion $(\T,E_m)$ is \textit{topologically transitive} because there exists a point $z \in \T$ such that $\mathcal{O}_{E_m}(z)$  is dense in $\T,$ as we just showed. The expansive $\times m$-orbit of $z$ will eventually intersect any open set (union of arcs) we might define on the circle. 
+
+Just as with rational circle rotations, the closure of a periodic $E_m$-orbit is invariant. Unlike circle rotations, however, circle expansions have more exotic types of invariant sets. We'll demonstrate one in the case of $m=3.$
+
+\begin{definition}[the Cantor ternary set]
+
+Set $C_0 := [0,1],$ and (for $i \geq 1$) define $C_{i} := T_L(C_{i-1}) \cup T_R(C_{i-1}),$ where $T_L(x) = x/3$ and $T_R(x) = x/3 + 2.$ Each set in the sequence $(C_i)$ is a pair of copies of its predecessor, a left branch and a right branch, both shrunken down by a factor of three and translated apart. Each $C_i$ has $2^i$ connected components. Another way to think of each $C_i$ is a copy of its predecessor with the middle thirds of each component deleted.
+
+We define $\mathcal{C},$ the Cantor ternary set, iteratively:  $\mathcal{C} := \lim_{n \to \infty}C_n = \bigcap_{n=1}^{\infty}C_n.$ (if you doubt that $C_0 \supset C_1 \supset C_2 \supset \ldots$ is a nested sequence of sets, the proof is an enjoyable exercise in recursive argument.) The Cantor set is a quintessential fractal, by virtue of its self-similarity. In the topology of $\R,$ it serves as a remarkable example of a set that is both \textit{perfect} (closed, but without isolated points) yet \textit{nowhere dense} (the interior of its closure is empty). 
+\end{definition}
+
+%do I need a pretty picture?
+
+\begin{theorem}
+The Cantor ternary set is an $E_3$-invariant set.
+\end{theorem}
+
+\begin{remark}
+We will shortly see that an equivalent construction of the Cantor set is $\mathcal{C} = \set{x \in [0,1]: \, (\forall k) E_3^k(x)\notin (1/3,2/3)}.$ Note that in base 3, $(1/3,2/3) = (0.1,0.2).$ If (and only if) a point $y\in[0,1]$ has a '1' in the $k$th position of its base-3 expansion does $E_3^k(y) = 0.1a_{k+1}\ldots \in (0.1, 0.2).$ Hence $\mathcal{C}$ is the subset of the unit interval of points whose base-3 expansion is comprised of 0's and 2's, union $\set{0.1}.$ It follows readily from this new definition that $\mathcal{C}$ is $E_3$-invariant. 
+\end{remark}
+
+\begin{proof}
+We show that $\mathcal{C} = \mathcal{A} := \set{x \in [0,1]: \, (\forall k) E_3^k(x)\notin (1/3,2/3)},$ which is clearly $E_3$-invariant. 
+
+First, we set $A_0 := [0,1],$ and for $i \geq 1$ define $A_i := A_{i-1} - E_3^{-(n-1)}(1/3, 2/3).$  Observe that $\mathcal{A} = lim_{n\to \infty} A_n.$ Furthermore, we have that $C_0 = A_0.$ We proceed by induction. Let $n \in \N$ and suppose $C_n = A_n.$ We must show that $C_{n+1} = A_{n+1},$ which is to say, that
+\[
+T_L(C_n) \cup T_R(C_n) = A_n - E_3^{-n}(1/3, 2/3).
+\]
+
+$\subseteq:$ First, let $x \in T_L(C_n).$ Since $T_L(C_n) \subset C_{n+1},$ and $(C_i)$ is a nested sequence, it follows that $x \in C_n = A_n.$ Furthermore, $x \in T_L(C_n)$ implies that $3x = E_3(x) \in C_n,$ which ensures that $E_3(x) \notin E_3^{-(n-1)}(1/3, 2/3).$ So $x \notin E_3^{-n}(1/3, 2/3),$ proving that $x \in A_{n+1}.$ Thus $T_L(C_n) \subset A_{n+1},$ and a similar argument shows that $T_R(C_n) \subset A_{n+1}$ as well.
+
+$\supseteq:$ Let $x \in A_n - E_3^{-n}(1/3, 2/3).$ Since $A_n = C_n,$ $x \in T_L(C_{n-1}) cup T_R(C_{n-1}.$ Without loss of generality, assume $x \in T_L(C_{n-1}).$ Then $3x \in C_{n-1} = A_{n-1}.$ Furthermore, since $x \notin E_3^{-n}(1/3, 2/3),$ we know that $3x \notin E_3^{-(n-1)}(1/3, 2/3) + i$ for $i \in {0, 1, 2}.$ Hence $3x \in A_{n-1} - E_3^{-(n-1)}(1/3, 2/3) = A_n.$ If $3x \in A_n,$ then $x \in T_L(A_n) = T_L(C_n) \subset C_{n+1}.$
+\end{proof}
+
+We remark that we could, with some modification to the procedure above, construct Cantoresque fractals that are invariant with respect to other factors of expansion. Also, by concatenating every base-3 word composed of only 0s and 2s into a single string, we obtain a number between 0 and 1 whose orbit is dense (and contained) in $\mathcal{C}.$ 
+
+The rotation and expansion of circles are perhaps the two `primitive' dynamical systems, simple enough to visualize but interesting enough to illustrate key dynamical concepts. We will return to these examples several times throughout the rest of this paper. To summarize what we have seen so far, the former mapping preserves distance between points while the latter increases it. The former is invertible, but the latter isn't.  Orbits in the former system are either universally periodic or universally dense, whereas in the former system points can display radically different behavior. Rotations are rather rigid, expansions give rise to a wide range of invariant sets. In the language of `higher-rank' actions, first seen in Chapter 1, we might call $R_\ga$ a unipotent or \textit{parabolic} system, whereas $E_m$ is \textit{hyperbolic}. We will see more of this particular dualism in Chapter 4. 
+
+\section{Ergodic Theory for Dummies}
+Let $(X,\mathfrak{A}, \mu)$ be a measure space and $T:X\to X$ a map from the measure space back into itself. If $T$ is \textit{measurable}, meaning the preimage of any measurable set is also measurable, and \textit{non-singular}, which requires that the pre-image of any zero-measure set also has measure zero, then we call $T$ a transformation. A transformation is basically a dynamical system with extra measure-theoretic structure.  One can check that both $R_\ga$ and $E_m$ are transformations with respect to Lebesgue measure and the usual $\gs$-algebra of $\T.$ 
+
+
+\begin{definition}
+We say that $T$ is \textit{measure-preserving} if $\mu(T^-1(A)) = \mu(A)$ for every $A \in \mathfrak{A}.$ Accordingly, the measure $\mu$ is called $T$\textit{-invariant.} A measurable $f$ is \textit{essentially T-invariant} if $\mu(\set{x \in X: f(T^tx) \neq f(x)}) = 0$ for every $t.$  A measurable set $A$ is \textit{essentially T-invariant} if its indicator function is essentially $T$-invariant. 
+\end{definition}
+
+The general idea of ergodic theory is the study of dynamical systems equipped with invariant measure(s). Across the sciences, the `ergodicity' of a stochastic process (such as a dynamical system) concerns the statistical correlation between time and space averages of its behavior. As a mathematical term, `ergodic'  is a borrowing from statistical mechanics, namely the ergodic hypothesis of Ludwig Boltzmann (1844-1906). We will present a version of his hypothesis in the inform language of measure and dynamics before giving a precise definition.
+
+ Let $(X,T:X\to X)$ be a transformation, $\mu$ a probability measure on $X,$ and $f:X\to R$ a function. We can imagine that $X$ is the phase space of some physical system and that $T$ models the evolution of the system over time. The orbit $\mathcal{O}_T(x)$ gives the phase space trajectory with respect to some starting condition(s), viz. the phase $x \in X.$ We think of $f$ as an `observable,' the outcome of a physical experiment (such as the measured pressure of a body of gas) and of  $\int f d\mu$ as the expected value of the observable with respect to some statistical distribution $\mu.$ Boltzmann's hypothesis states that if $\mu$ is an equilibrium distribution (invariant with respect to time), then the time average of the observable $f$ along a given phase space trajectory (excluding a negligible set of ill-behaved starting states) asymptotically approaches the expected value of $f$ with respect to $\mu$ over all phases. In other words, virtually every phase space trajectory samples all possible states if given enough time, and spends time in each of them proportional to the initial probabilistic distribution. Hence we say that the time average of an observable, under these vaguely-posed special conditions, tends to equal the space average. 
+
+
+\begin{definition}
+A measure-preserving transformation $T$ is \textit{ergodic} if any essentially $T$-invariant measurable set has either zero or full measure. Equivalently, $T$ is ergodic if any essentially $T$-invariant measurable function is constant $\mod 0.$ 
+\end{definition}
+
+If a system is not ergodic, then it has a non-negligible invariant subset that does not interact with any other part of the system: effectively, there's another system contained within. The result of a system being ergodic is that it can't be decomposed into smaller pieces. We note that it is easy to prove one direction of the above equivalence. Suppose that every $T$-invariant measurable function is constant $\mod 0.$ Let $A$ be an essentially $T-invariant$ measurable set, and let $\mathds{1}_A$ be the indicator function on $A.$ Then $\mathds{1}_A$ is essentially $T$-invariant, and by supposition, it's constant $\mod 0.$ Therefore $\mathds{1}_A$ is identically 0 or 1 on $X$, proving that $A$ has either zero or full measure.
+
+ A useful fact that I will state, without proof, is that $T$ is ergodic if and only if any essentially invariant $f \in L^p(X, \mu)$ (i.e., bounded $f$) is constant $\mod 0$ (\cite{MB02}).
+ 
+ \begin{theorem}
+ The circle rotation $R_\ga$ is ergodic with respect to Lebesgue measure $\lambda$ if and only if $\ga$ is irrational.
+ \end{theorem}
+ \begin{proof}
+ Let $\ga$ be irrational. It suffices to show that an essentially $R_\ga$-invariant bounded function is constant $\mod 0.$ Let $f$ be an essentially $R_\ga$-invariant bounded function. It follows that $f$ is square-integrable. Then $f$ belongs to $L^2(\T,\lambda)$ a Hilbert space with the following property: for some unique sequence $(a_n)_{n\in \Z},$ the Fourier series of $f,$ $\sum_{n \in \Z} a_ne^{2n\pi ix},$ converges to $f$ in the $L^2$ norm. Similarly, $\sum_{n \in \Z} a_ne^{2n\pi i(x+\ga)}$ converges to  $f \circ R_\ga.$ But by assumption, $f = f \circ R_\ga \mod 0,$ so 
+ $a_n = a_ne^{2n\pi i\ga}$ for all $n.$ If $n \neq 0$, then $e^{2n\pi i \ga} \neq 1,$ so $a_n = 0.$ If $n = 0,$ then $e^{2\pi i \ga} = e^0 = 1,$ so potentially $a_0$ is nonzero. Either way, $f$ converges to $a_0,$ so $f$ is constant $\mod 0.$ We conclude that $R_\ga$ is ergodic.
+ 
+ If $\ga$ is rational, then $\ga = p/q$ for some integers $p,q.$ We define an open arc 
+ \[
+ A(k) = (\frac{k-1/4}{q},\frac{k+1/4}{q}))
+ \]
+ and set 
+ \[
+ S = \bigcup_{1\leq k \leq q}A(k).
+ \]
+ Observe that $R_\ga^{-1}(A(k)) = A(k -p).$  So $R_\ga^{-1}(S) = S,$ which proves  that $S$ is $R_\ga$-invariant. But $\gl(S) = \sum_{k=1}^{q}\gl(A(k)) = q\gl(\frac{k-1/4}{q},\frac{k+1/4}{q})) = q(\frac{k +1/4 - (k-1/4)}{q}) = q(\frac{1/2}{q}) = 1/2,$ which implies that $R_\ga$ is not $\gl$-ergodic.
+  \end{proof}
+ 
+ \begin{theorem}
+ The circle expansion $E_m$ is ergodic with respect to Lebesgue measure for any $m.$
+ \end{theorem}
+ \begin{proof}
+ Let $m \in \N.$ Let $f$ be an essentially $E_m$-invariant bounded function. Then for some unique sequence $(a_n)_{n \in \Z},$ the Fourier series  $\sum_{n \in \Z} a_ne^{2n\pi ix}$ converges to $f$ in the $L^2$ norm. Likewise, $\sum_{n \in \Z} a_ne^{2n\pi imx}$ converges to $f \circ E_m$ which is equal to $f \mod 0.$ So for almost every $x,$
+ \[
+ \sum_{n \in \Z} a_ne^{2n\pi ix} = \sum_{n \in \Z} a_ne^{2mn\pi ix}.
+ \]
+By uniqueness of the expansion, we may roup together terms of the same exponent and conclude that $a_{mn}e^{2mn\pi ix} = a_{n}e^{2n\pi imx},$ which is to say that $a_n = a_{mn} = a_{m^2n} = \ldots.$ If $n \neq 0,$ then the series will not converge unless $a_n = 0.$ Therefore $f$ converges to a constant $a_0$ in the $L^2$ norm, so $f$ is constant $\mod 0.$ We conclude that $E_m$ is $\lambda$-ergodic. 
+ \end{proof}
+ 
+ For more information on the ergodic theorems and interesting applications of ergodicity to number theory, see \cite{MB02} and \cite{ME11}.
+
+\section{Measure rigidity}
+
+Given a transformation $T:X \to X,$ for some finite measure space on $X,$ let $\mathcal{M}(T)$ be the set of $T$-invariant probability measures. The rigidity of $\mathcal{M}(T)$ is the extent to which the members of $\mathcal{M}(T)$ share an algebraic structure more predetermined than one might expect \textit{a priori} (\cite{Ein09}). Holomorphic functions in $\C$ are a classic example of a `rigid' family of objects: every holomorphic function $f$ can be expressed locally as a power series whose coefficients are a function of the (local) derivatives of $f.$
+
+At one extreme end of the rigidity spectrum, one might be able to give no reasonable categorization of the invariant probability measures of $T.$ At the other end, $\mathcal{M}(T)$ might contain only one element, in which case it is \textit{uniquely ergodic.}
+
+
+\begin{theorem}
+The circle rotation $R_\ga$ is uniquely ergodic if and only if $\ga$ is irrational. That is, Lebesgue measure $\gl$ on the circle is $R_\ga$-invariant and is the only invariant probability measure if and only if $\ga$ is irrational. 
+\end{theorem}
+
+\begin{proof}
+Any measurable set $A$ on $\T$ may be approximated arbitrarily well by a finite union of intervals. This is because the set of intervals in $\T$ is a semi-algebra that generates the Lebesgue $\sigma$-algebra of measurable sets. The Lebesgue measure of a generic compact interval $[a,b] \subset \T$ is $\int_a^b \mathds{1}dx = b - a$ where $\mathds{1}$ is the constant function that is identically 1. To prove that $\gl$ is $R_\ga$-invariant, it suffices to check then that $\int_a^b \mathds{1} d\gl = \int_a^b \mathds{1} \circ R^{-1}_\ga d \gl.$ 
+
+Assuming we are dealing with addition $\mbox{mod 1},$ we may write
+\[
+\int_a^b \mathds{1} \circ R^{-1}_\ga d \gl = \int_{T^{-1}(a)}^{T'^{-1}(b)} \mathds{1} (T^{-1})'(x) d \gl = \int_{a -\ga}^{b - \ga} \mathds{1} d \gl = (b - \ga) - (a - \ga) = b-a,
+\]
+which shows that $\gl([a,b]) = \gl(R_\ga[a,b]),$ proving that Lebesgue measure is rotation-invariant. 
+
+%recall: \int f d\gl = \int a_0 e^0 d\gl
+%and \int
+
+Now, to prove our claim of unique ergodicity of $\ga,$ we first assume that $\ga$ is irrational. Let $\mu \in \mathcal{M}(T)$ be an unknown $R_\ga$-invariant measure. To show that $\mu$ and $\gl$ agree, it suffices to show that for any continuous function $f:\T \to \R,$ $\int f d \mu = \int f d \gl.$ (again, `agreement' of the two measures on continuous functions implies agreement on indicator functions, which implies that $\mu(X) = \gl(X)$ for any measurable set $X.$) 
+
+Set $e_n(x) = e^{2n\pi ix}$ for $x \in \T$ and $n \in \Z.$ By the Stone-Weierstrass theorem, $f$ can be uniformly approximated by a linear combination of terms $e_n$ (i.e. a Fourier series), so we will first check the integrals (over $\T$) that $\gm$ induces on each $e_n.$  If $\mu$ is $R_\ga$-invariant, then 
+\[
+\int e_n d\mu = \int e_n \circ R_\ga d\mu.
+\]  
+Now $e_0 = \mathds{1}_{\T},$ so assume $n \neq 0.$ Thus $e_n(R_\ga(x)) = e^{2n\pi i (x + \ga)} = e^{2n\pi i \ga}e_n(x).$ Then
+\[
+\int e_n d\mu = \int e_n \circ R_\ga d\mu. = e^{2n\pi i \ga}\int e_n(x) d\mu.
+\]
+Since $\ga \in \R \setminus \Q$ we know that $e^{2n\pi i \ga} \neq 1,$ so $\int e_n d \mu = 0$ (for $n \neq 0$). Thus
+\[
+\int f d \gm = \int a_0 e_0 d \gm = a_0 \int \mathds{1} d \gm = a_0.
+\]
+We'll show that $\gl$ defines the same integral on $f.$ For each $n,$ it follows that
+\[
+\int_{\T} z^n dz = \int_0^1 e^{2\pi i t n} (2 \pi i e^{2 \pi i t}) dt = 2 \pi i \int_0^1 e^{2 \pi i t (n+1)} dt = 2 \pi i \int_{\T} e_{n+1}
+\]
+by parameterizing $z(t) = e^{2\pi i t}.$ Therefore,
+\[
+\int_0^1 e_n(t)dt = \frac{1}{2\pi i} \int_{\T} z^{n-1} dz.
+\]
+When $n \neq 0,$ $\int_{\T} z^{n-1}$ comes out to zero. When $n = 0,$ 
+\[
+\frac{1}{2 \pi i} \int_{\T} z^{-1} dz = \frac{1}{2 \pi i} 2 \pi i = 1.
+\]
+This implies that under the Riemann integral (which is identical to Lebesgue measure for continuous functions),
+\[
+\int_{\T} f d \gl = \int_{\T} a_0 e_0 d \gl = a_0. 
+\]
+We conclude that $\gm$ and $\gl$ define the same measure on $\T.$
+
+Now suppose that $\ga$ is rational. Then $\ga = p/q$ for some integers $p,q.$ Let $K = \set{k/q:\,1\leq k \leq q}$ be the set of points (\textit{atoms}), evenly spaced by arc length $1/q$, that includes zero. Note that $K$ is invariant with respect to rotation by $p/q,$ and that for each $k \in K,$ $R^{-1}_\ga (k) \in K.$  With this in mind, we'll define an `atomic' probability measure (sometimes called a \textit{Dirac measure}) $\nu$ as follows: for any measurable $X \subset \T,$ we set the measure
+\[
+\nu(X) := \sum_{k \in K \cap X} 1/q.
+\]
+Clearly $\nu$ is non-negative, assigns zero measure to the empty set, and is countably additive of disjoint sets. 
+
+Consider the interval $Y = [0, 1/q].$ Under Lebesgue measure, we have that $\gl(Y) = 1/q.$ But $Y$ contains two atoms $k\in K,$  (namely $1/q$ and $q/q = 0$) so $\nu(Y) =  2/q.$ Hence $\nu$ disagrees with Lebesgue measure. All that remains to check is that $\nu$ is $R_{\ga}$-invariant. But for any measurable $X\subset \T,$ if $X$ contains $n$ atoms of $K$, then $R_\ga^{-1}(X)$ also contains $n$ atoms, since rotation by $\ga = p/q$ can only map atoms to atoms. So $\nu(X) = n/q = \nu(R_\ga^{-1}(X),$ implying that $\nu$ is $R_\ga$-invariant.
+\end{proof}
+
+%$G \curvearrowright X$, where $G$ is the acting group, and $X$ is the space. 
+
+The circle expansion map $E_m \curvearrowright \T$ also preserves Lebesgue measure. Given a generic interval $[a,b] \subset \T,$ 
+\[ 
+E_m^{-1}([a,b]) = \set{[\frac{a+i}{m}, \frac{b+i}{m}]:\,0 \leq i < m}.
+\]
+Then
+\[
+\gl (E_m^{-1}([a,b])) = \sum_{i=0}^{m-1} \gl([\frac{a+i}{m}, \frac{b+i}{m}]) = m(\frac{b}{m} - \frac{a}{m}) = b - a = \gl([a,b]).
+\]
+Because $E_m$ preserves Lebesgue measure on intervals, it must preserve Lebesgue measure on all measurable sets. However, $E_m,$ unlike $R_\ga$ with irrational $\ga$, is not uniquely ergodic. 
+
+
+When we formed an invariant, non-Lebesgue probability measure $\nu$ for a rational circle rotation, we defined an `atomic measure,' a measure in which the smallest sets with positive measure were singletons, or atoms. The \textit{support} of $\nu$ was the orbit closure of the point $0 \in \T.$ One can think of the support of a measure space as the subspace where the measure is positive, or more precisely, as the closure of the maximal subset such that every open set within has positive measure. Hence atomic measures are measures whose supports are a countable collection of singletons. 
+
+Because orbit closures are (definitionally) closed, proper, and transformation-invariant subsets of their system spaces, they naturally lend themselves to constructing invariant atomic measures. In the case of $E_m,$ we could build such a measure with respect to any point whose base-$m$ is expansion is periodic. However,  in the previous section we encountered a closed $E_3$-invariant proper subset of the circle that \textit{isn't} the closure of a periodic orbit: the Cantor set. Indicating the relative complexity of circle expansions in comparison with rotations, we'll define an $E_3$-invariant measure on the unit interval that is neither atomic nor Lebesgue, suggesting that $E_m$ is non-uniquely ergodic, and non-unique in a more significant way than $R_\ga.$ 
+
+\begin{lemma}
+A necessary preliminary to defining the measure in question is the fact that the Cantor set is homeomorphic to the countably -infinite product of a two-element set with itself, each set endowed with the discrete topology:
+\[
+\mathcal{C} \cong 2^\N
+\]
+\end{lemma}
+\begin{proof}
+There is a natural bijection between $\mathcal{C}$ and $2^\N$: any $x \in \mathcal{C}$ has a base-3 expansion $x = 0.x_1x_2\ldots$ where each $x_i \in \set{0,2}.$ Let $f(x) = (x_1,x_2, \ldots) \in \set{0,2}^\N.$ The natural topology of $2^\N$, as the product topology of countably infinite discrete topologies, has a basis generated by \textit{cylinder sets} (\cite{MB02}). We can define any cylinder on $\set{0,2}^N$ as follows: let $n_1 < n_2 \ldots < n_k$ be some finite index in $\N,$ and let $j_i \in \set{0,2}$ for $i \leq k.$ These arguments define a cylinder, 
+\[
+K^{n_1,\ldots,n_k}_{j_1,\ldots,j_k} = \set{x = (x_l): \,  x_{n_i} = j_i, i = 1, \ldots , k},
+\]
+which is the set of sequences in $2^N$ that 'agree' with a prescribed binary sequence $(j_i).$ Observe that any such cylinder is actually the union of cylinders of the form
+\[
+K_{j_1,\ldots,j_k} = \set{x = (x_l): \,  x_i = j_i, i = 1, \ldots , k},
+\]
+thus allowing us to restrict our attention to prescribed sequences from 1 to some $k \in \N.$  For reasons that should become apparent, we will call these sets 'connected cylinders.' An example would be $K_{0,0,2},$ the set of all sequences that begin as $(0,0,2,\ldots).$ 
+
+As it turns out, under the bijection $f,$ the pre-image of a cylinder corresponds to one of the `branches' of the recursive construction of $\mathcal{C}.$ Recall that we could progressively `refine' the unit interval into left and right branches (via the mappings $T_L$ and $T_R,$ which together act delete the middle third of successive connected components), and that the limit of this reductive process--in some sense, an infinite binary tree-gives the Cantor set. Though we never made it explicit, it's easy to check that $T_L([0,1]$ is the set of points whose base-3 expansion begins with a 0, and $T_R([0,1]$ is the set of points whose base-3 expansion begins with a 2. Generalizing this argument, we see that for any connected cylinder,
+\[
+f^{-1}(K_{j_1,\ldots,j_k}) = \set{x = 0.x_1x_2\ldots:\, x = .j_1 \ldots j_k\ldots} = T_{p_1, p_2, \ldots , p_k},
+\]
+where
+\[
+p_i = 
+\begin{cases}
+L \quad \text{if $j_i = 0$} \\
+R \quad \text{if $j_i = 2$}, \\
+\end{cases}
+\]
+and
+\[
+T_{p_1, p_2, \ldots , p_k} = T_{p_k} \circ T_{p_{k-1}}\circ ...\circ T_{p_1}(0,1).
+\]
+So, for example, $f^{-1}(K_{0,0,2}) = T_{L,L,R}.$ Now each $T_{p_1, p_2, \ldots , p_k}$ corresponds to a connected component of $C_k$ in the recursive construction of $\mathcal{C}.$ This component is open (clopen, in fact), so $f$ is continuous.
+
+$\mathcal{C}$ is compact because it is closed and bounded. $2^{\N}$ is Hausdorff because it is the product of Hausdorff spaces. Given that $f: \mathcal{C} \to 2^{\N}$ is a continuous bijection, we can conclude that $f$ is a homeomorphism: $f$ is a closed mapping, so $f^{-1}$ is continuous. 
+\end{proof}
+
+
+\begin{definition}[the Coin-Flipping Measure]
+We have shown above that we can treat the Borel $\gs$-algebra of $\mathcal{C}$ and of $2^\N$ as topologically equivalent under the above homeomorphism. The connected cylinders of the form $K_{j_1,\ldots,j_k}$ generate the topology of $2^\N,$ so their pre-images under $f$ generate the topology of $\mathcal{C}.$ Hence we define $\gt(f^{-1}(K_{j_1,\ldots,j_k})) := 2^{-k}.$ Effectively, we are treating the connected components of Cantor construction sets, $T_L(C_i)$ or $T_R(C_i)$ as generating the Borel-algebra of $\mathcal{C};$ the measure of these sets correspond (inversely) to their depth $k$ in the binary tree that generates the Cantor set. 
+
+The measure $\gt$ is still, technically, a measure on the unit interval, but observe that its support is $\mathcal{C}$: an equivalent definition of the support of a measure space is the intersection of all sets with full measure. The sets of $[0,1]$ with full $\gt$ measure are exactly $C_0 = [0,1], C_1 = T_L([0,1]) \cup T_R([0,1]), C_2 = \ldots,$ and their intersection is, by definition, $\mathcal{C}.$ The support of Lebesgue measure on the unit interval is the whole interval, so $\gt$ is a non-atomic, non-Lebesgue, probability measure. 
+\end{definition}
+
+\begin{theorem}
+The coin-flipping measure $\gt$ is $E_3$-invariant. 
+\end{theorem}
+\begin{proof}
+Recall that Cantor construction sets generate the Borel-algebra of $\gt$ on $[0,1].$ Let $X$ be such a set---then $X=[0,1],$ or for some $i \geq 0,$ $X = T_L(C_i)$ or $X= T_R(C_i).$ In the former case, 
+\[
+\gt(E^{-1}_3([0,1])) = \gt([0,1/3] \cup [1/3, 2/3] \cup [2/3, 1]) = \gt([0, 1/3]) + \gt([1/3, 2/3]) + \gt([2/3, 1]) 
+\]
+by subadditivity of $\gt,$ 
+\[
+= \gt(T_L(C_0)) + 0 + \gt(T_R(C_0)) = 2^{-1} + 2^{-1} = 1 = \gt([0,1]),
+\]
+proving $\gt$-invariance of $X$ in the first case. The argument for the latter case is quite similar, and I'll leave it as an exercise for the unconvinced. 
+\end{proof}
+
+We should take away, from this discussion, the sense that there is a deep correspondence between the possible types of orbit closures in a transformation (be they dense, periodic, or dense in a particular subset) and the invariant measures associated with a system. We may classify such measures by their supports, which can be the whole space, a finite collection of atoms, or even a fractal, as we have seen with the Cantor set. 
+
+\section{The $\times2\times3$ Conjecture}
+We will now discuss a dynamical system obtained from the joint action of two expanding maps.
+
+\begin{example}[$\times2 \times3$]
+For $x \in \T,$ let $F_{2,3}(x)$ denote the set (a rank-two semigroup) $\set{2^k3^l(x):\,k,l \in \mathbb{Z}^+}.$  The $\times2\times3$ map is the two-parameter dynamical system associated with the semigroup action of $F_{2,3}$ on $\T$ 
+\end{example}
+
+H. Furstenberg (b. 1935) was the first to study this system as an example of the `product' (in a loose sense) of two semigroup actions with co-prime factors. He proved that $F_{2,3}(x)$ is dense in $[0,1]/\sim$ for irrational $x$ (\cite{Ein09}). In fact, we could generalize this to hold for any irrational orbit set $F_{m,n}$ where $m$ and $n$ are coprime. We are led to ask a natural question. Given that we have seen non-Lebesgue  invariant probability measures for $E_3$--and by a small stretch of the imagination could imagine similar measures for $E_2$--are there any probability measure that are invariant with respect to both $\times2$ and $\times3$ (which is to say, $F_{2,3}$)? In the previous chapter, we have seen that closed, invariant sets dependably correspond to the set of possible invariant measures. Unlike in the case of $E_2$ or $E_3$ alone, there is no obvious way to define a Cantoresque fractal that is invariant under their joint action. The conjecture below is attributed to Furstenberg.
+
+\begin{conjecture}[the $\times2 \times 3$ Conjecture]
+The only probability measures on the circle that are invariant for both $E_3$ and $E_2$ are Lebesgue measure, atomic measures defined with respect to certain rational numbers (viz. those whose expansions are periodic in base 6), and convex combinations (averages) of the previous two. Stated equivalently, the only infinite, closed, $F_{2,3}$-invariant subset of the circle is the circle itself. 
+\end{conjecture}
+
+The conjecture is still unresolved, but Dan Rudolph (1949-2010) proved the fullest partial result (\cite{Rud90}) in 1990:
+
+\begin{theorem}
+If $\mu$ is an $E_3,$ $E_2$-invariant measure with positive metric entropy, then $\mu$ is Lebesgue measure. 
+\end{theorem}
+
+But what is metric entropy, anyway?
+
+\section{The Most Glorious Number in Dynamics}
+
+(The title of this section is owed to an assertion of Anatole Katok (b. 1944). The discussion itself follows \cite{Mor05}.)
+
+Entropy, in thermodynamics, is the quantification of the uncertainty of a physical system. The classic illustrating example is this: suppose that a sealed box were split into two connected compartments, each filled with a different type of gas, and that at will one could remove the dividing partition. The best case, in terms of certainty, is that the gases will remain segregated, but experience tells us that the intermingling of the gases is all but certain. Furthermore, once the gases are homogeneously distributed across the box, they will (almost certainly) not re-segregate without outside interference. This is the gist of physical entropy. Another analogy is that domestic spaces tend to get messier unless someone is making a conscious effort to clean up. These scenarios superficially adhere to the second law of thermodynamics, which is (roughly) that the entropy of an isolated system is either constant or increasing.
+
+
+The mathematical concept of entropy builds on this notion.
+\begin{definition}[Entropy of a partition]
+. First, we define the entropy of a partition. Let $(X, \mathfrak{A}, \mu)$ be a probability space. Suppose $\mathscr{A} = \set{A_1,A_2,\ldots, A_m}$ is a \textit{partition} of $X,$ which is to say, a finite collection of essentially disjoint measurable sets, such that $\bigcup_{i \leq m} A_i = X\mod 0.$ Furthermore, let $\mu(A_i) = p_i$ for each $i.$ The \textit{entropy} of $\mathscr{A}$ is
+\[
+H_{\gm}(\mathscr{A}) = \sum_{i = 1}^{m} p_i \log \frac{1}{p_i},
+\]
+with $\log$ typically taken with base 2 or $e.$ Fittingly enough, entropy as defined here can never take negative values.
+\end{definition}
+
+We can think of a partition $\mathscr{A}$ of $X$ as a set of mutually exclusive, exhaustive probabilistic events: an experiment with $m$ distinct outcomes. In this framework, $H(\mathcal{A})$ represents the amount of uncertainty associated with the experiment, or perhaps the amount of new information to be gained from conducting the experiment. For instance, the entropy of the trivial partition $H(\set{X} = 1 \cdot \log 1 = 0,$ which matches our expectation that an experiment with certain (just one) outcome can tell us nothing new. On the other hand, $H(\mathscr{A})$ is maximized when the probability of each event $p_i = 1/m$: an experiment of $m$ equally likely outcomes is an uncertain thing. 
+
+We can extend this measurement of uncertainty to sample sets that change over time. As with our analogy for ergodicity, we might imagine  again that $X$ is a phase-space evolving under a transformation $T.$ As the transformation progresses, the likelihood of experimental outcomes (i.e., the measures of sets in a partition of $X$) may change over time with more or less certainty. Hence we can speak of the entropy of the transformation itself.
+
+\begin{definition}[Entropy of a Transformation]
+
+First, we denote the \textit{refinement} of two partitions, $\mathscr{A}$ and $\mathscr{B},$ as 
+\[
+\mathscr{A} \lor \mathscr{B} = \set{A \cap B:\,A \in \mathscr{A},B \in \mathscr{B}}.
+\]
+
+Let $(X,\mu, T)$ be a transformation $T$ on a space $X$ equipped with measure $\mu.$ The entropy of this triple is
+\[
+h_\mu(T) = \sup_\mathscr{A} \lim _{n \to \infty} \frac{H_\mu (\mathscr{A} \lor T^{-1}\mathscr{A} \lor \ldots \lor T^{-(n-1)}\mathscr{A})}{n},
+\]
+where the supremum is taken with respect to finite partitions $\mathscr{A}$ of $X,$ the vast number of which makes this definition unwieldy in practice. But suppose that $\mathscr{A}$ is a \textit{generating partition} for $T.$ That is, its orbit
+\[
+\bigcup_{k = -\infty}^\infty T^k(\mathscr{A})
+\]
+generates the $\gs$-algebra associated with $\mu.$ Then
+\[
+h_\mu(T) = h_\mu(T, \mathcal{A}) := \lim_{n \to \infty} \frac{H_\mu (\mathscr{A} \lor T^{-1}\mathscr{A} \lor \ldots \lor T^{-(n-1)}\mathscr{A})}{n}.
+\]
+\end{definition}
+
+To see these definitions applied, we'll calculate entropy for circle rotations and circle expansions (assuming Lebesgue measure). Notably, we know \textit{a priori} that the former is a predictable system, and the latter a rather unpredictable in the following sense. Thinking in terms binary expansions, let $x \in \T$ and let $\mathscr{A} = \set{[0, 0.1), [0.1, 1)]}$ partition  $\T,$ identified with $[0,1).$ Let $\chi: [0,1) \to \set{0,1}$ be the indicator function for $[0.1, 1).$ Observe that $\chi (x)$ returns the first digit of the expansion of $x.$ We consider the sequence
+\[
+\ldots \chi(T^{-2}(x)), \chi(T^{-1}(x)), \chi(T^{0}(x)), \chi(T^{1}(x)), \chi(T^{2}(x)), \ldots,
+\]
+where $T$ stands for some transformation of the circle. 
+
+First, let $T$ be $R_{\sqrt{17}}.$  As $\sqrt{17} \approx 1/60,$  we would expect the above sequence to consist of alternating strings of 30 0's and 30 1's: a point $x$ spends about 30 iterations of $R_{\sqrt{17}}$ in each half of the partition. So if $\chi(R_{\sqrt{17}}^{-1}(x) = 0$ and $\chi(x) = 1,$ we can say for certain that $\chi(R_{\sqrt{17}}^k(x)) = 1$ for $1 \leq k \leq 25.$ And if we are given more `data points', that is, the evaluation of $\chi(R_{\sqrt{17}}^{-n})$ for, say, $1 \leq n \leq 1000,$ we can predict the forward orbit of $x$ under $R_{\sqrt{17}}$ with extreme precision. We expect, as $n$ goes to infinity, that we can analyze the system's behavior with certainty, an expectation that matches the fact (that we shall prove below) that $R_{\sqrt{17}}$ has an entropy of zero. 
+
+However, if $T$ stands for $E_2,$ the picture gets more complicated. We've seen that points of the circle can show rather erratic behavior under expansion mappings. A point's orbit under $E_2$ is determined to the extent that its binary expansion is known. Given that $E_2$ corresponds to a left-shift on binary numbers, we see that 
+\[
+\chi(E_2^{-1000}(x)), \chi(E_2^{-999}(x)), \ldots \chi(E_2^{-1}(x))
+\]
+is a sequence of the first 1000 digits of the binary expansion of $x,$ which tells us next to nothing about the 1001st digit, $\chi(x)$! This is because almost every number is \textit{normal}, which means that it has a random distribution of digits in any base. Thus, even with a great amount of prior information, $E_2$ is unpredictable, at least with respect to this partition. Different points might have a similar future trajectory, and two points that coincide in an observable past may diverge. This observation agrees with the fact that $E_2$ has positive entropy. 
+
+\begin{theorem}
+The (Lebesgue) entropy of $R_\ga$ is 0 for all $\ga.$ 
+\end{theorem}
+\begin{proof}
+In the case where $\ga$ is a rational $p/q,$ first note that if $n \geq q,$ then for any partition $\mathscr{A}$ of $\T,$
+\[
+(\mathscr{A} \lor T^{-1}\mathscr{A} \lor \ldots \lor T^{-(n-1)}\mathscr{A}) = (\mathscr{A} \lor T^{-1}\mathscr{A} \lor \ldots \lor T^{-(q-1)}\mathscr{A}),
+\]
+for $R_{p/q}$ is periodic with period $q.$ Presumably $H(\mathscr{A} \lor T^{-1}\mathscr{A} \lor \ldots \lor T^{-(q-1)}\mathscr{A})$ is a bounded quantity, $\gd.$ Then
+\[
+h_\gl(R_{p/q}) = \sup_\mathscr{A} \lim _{n \to \infty} \frac{\gd}{n} = \sup_\mathscr{A} 0 = 0. 
+\]
+Suppose next that $\ga \in \R \setminus \mathbb{I} .$ Let $I$ be a proper, non-empty arc of the circle, and let $\mathscr{A} = \set{I, \T \setminus I}.$ For any partition $\mathscr{B},$ $\abs{\mathscr{A} \lor \mathscr{B}} \leq \abs{\mathscr{A}} + \abs{\mathscr{B}} = 2 + \abs{\mathscr{B}}.$ Furthermore, $R_\ga$ preserves the cardinality of a partition. Hence 
+\[
+\abs{\mathscr{A} \lor R_\ga^{-1}(\mathscr{A}) \lor R_\ga^{-2}(\mathscr{A}) \lor \ldots \lor R_\ga^{-(n-1)}(\mathscr{A})} \leq 2n.
+\]
+Recalling that the upper bound on the entropy of a partition of $m$ constituent sets is when each set has measure $1/m,$, we find that
+\[
+H_{\gl}(\mathscr{A} \lor R_\ga^{-1}(\mathscr{A}) \lor R_\ga^{-2}(\mathscr{A}) \lor \ldots \lor R_\ga^{-(n-1)}(\mathscr{A})) \leq \sum_{i = 1}^{2k}\frac{1}{2k}\log (2k) = \log (2k).
+\]
+If $\mathscr{A}$ is a generating partition, then
+\[
+h_{\gl}(R_\ga, \mathscr{A}) = \lim_{k \to \infty}\frac{log(2k)}{k} = 0. 
+\] 
+To see that $\mathscr{A}$ is indeed a generating partition of $\T,$ let $I = [a,b].$ The orbits of $a$ and $b$ are $\gl$-dense $\T$ because $\ga$ is irrational, so $\mathscr{A}$ is a collection of disjoint intervals whose endpoints are a dense set, generating the standard Lebesgue sigma algebra: a generating partition. 
+\end{proof}
+
+\begin{theorem}
+The (Lebesgue) entropy of $E_2$ is $\log 2.$ 
+\end{theorem}
+\begin{proof}
+Let $\mathscr{A} = \set{[0, 1/2), [1/2, 1)}.$ Then 
+\[
+\mathscr{A} \lor T^{-1}\mathscr{A} \lor \ldots \lor T^{-(n-1)}\mathscr{A} = \set{K_{j_1, \ldots ,j_n}: \, (j_i)_1^n \in \set{0,1}^n},
+\]
+which is the set of connected binary cylinders of length $n,$ each of which has measure $2^{-n}.$ Then
+\[
+h_{\gl}(E_2, \mathscr{A}) = \lim \limits_{n \to \infty} \frac{2^n \cdot (2^{-n} \log 2^n)}{n} = \frac{\log 2^n}{n} = \log 2.
+\]
+The backward orbit $\bigcup_{i = 1}^{k}E_2^{-k}(\mathscr{A})$ gives us $2^k$ disjoint half-open intervals each of length $2^{-n}$: it's clear that the limit as $k$ goes to infinity of this orbit gives us a collection of intervals whose endpoints are $\gl$-dense. Then $\mathscr{A}$ is a generating partition, so $h_{\gl}(T) = \log 2.$ 
+\end{proof}
+
+
+
+\chapter[Homogeneous dynamics]{The Littlewood conjecture and homogeneous dynamics}
+
+\section{Reformulating the Littlewood Conjecture}
+
+We now return to the statement of the Littlewood Conjecture. We have reason to believe that 
+  \[
+  \liminf\limits_{n \to \infty}\,n \norm{n \alpha} \norm{n \beta}  = 0,
+   \]
+ for all $\alpha, \beta \in \R.$ The aim of this chapter is to contextualize and outline  the 2006 theorem of Einsiedler, Katok, and Lindenstrauss, who proved that the LC's set of exceptions in $\R^2$ has Hausdorff dimension zero, which, we will see, improves considerably on the standing knowledge that the exceptions lie in a zero measure set. Their primary theorem entails a great deal of abstraction: rather than proving anything that recognizably pertains to classical Diophantine approximation, EKL (following Margulis) reframe the problem as a classification of measures on \textit{spaces of lattices} that are invariant with respect to \textit{diagonal} action. In this section and the next, we will summarize how EKL reformulated the LC, a number theoretic problem, in terms of \textit{homogeneous dynamics.}
+ 
+ We can think of a homogeneous space as one that looks the same when viewed from any local perspective: the surface of a sphere is homogeneous, but the surface of a cube is not. Formally, for any two points $x, y \in X$, a homogeneous space, there exists a \textit{symmetry} $g$ on $X$ such that $gx = y.$ The set of all symmetries of a space $X$ form a group $G$ that acts on $X,$ acting \textit{transitively} precisely when $X$ is homogeneous. Homogeneous spaces are relatively nice objects to study because they afford dual characterizations, a geometric one ($X$) and an algebraic one ($G$ modulo some stabilizing subgroup) each with useful structure.
+ 
+The LC as it is usually written appears to be an analytic problem, but it's also a disguised Diophantine inequality: the LC holds if and only if the expression
+\[
+\abs{n(n \ga - m)(n \gb - l)} < \ge
+\]
+is solvable for all $\ge > 0,$ with $(n,m,l) \in \Z^3$ and $n \neq 0.$ (Without loss of generality, we can restrict our attention to $\ga,\gb\,\mod 1.$) The lefthand side of the inequality is the product of three linear forms in $\R^3,$ $P(\vec{x}) = P(x_1,x_2,x_3) = x_1(\ga x_1 - x_2)(\gb x_1 - x_3)$. (Henceforth, we will sometimes refer to $P$ as `the Littlewood form.') We observe that, for a $\vec{x} \in \R^3,$ when $\abs{\vec{x}}$ is small, then $\abs{P(\vec{x})}$ is small as well. Yet if we restrict our attention to integral vectors, with the first coordinate nonzero, the shortest one is  $(1, 0, 0),$ at which $P$ evaluates to  $\ga \gb,$ which is not particularly small. The previous observation seems unhelpful, at least until we broaden our search. 
+
+Let $a$ be an automorphism of $\R^3$ that preserves $P.$ If $a\vec{x}$ is small, then $P(a\vec{x}) = P(\vec{x})$ is small as well. It turns out that $\mbox{Aut}(P)$ (the `symmetry' group of $P$) is quite large, so this new approach gives us more to work with: to solve the LC, we now want to find an automorphism  $P$ that shrinks integral vectors. To be precise about what we mean by `small,' for any linear transformation $f \in \mbox{GL}(3,\R)$ of $\R^3,$ let $\delta(f . [\Z^3])$ denote the \textit{least} length of the set of non-zero integral vectors transformed by $f.$ (In the next section, we will see why we put $\Z^3$ in square braces.)
+
+Thus if for any $\ge > 0,$ there exists an $a \in \mbox{Aut}(P)$ such that 
+\[
+\delta(a . [\Z^3]) < \ge,
+\]
+we might expect the Littlewood conjecture to hold. But a pitfall remains: there is no guarantee that the shortest vector $\vec{x}$ generated by $a.[\Z^3]$ has a non-zero $x_1$ component. 
+
+We can circumvent this difficulty in the following way: we define the linear transformation $h_{\ga \gb}$ as that which maps
+\[
+(x_1,x_2,x_3) {\mapsto} (x_1, \ga x_1 + x_2, \gb x_1 + x_3).
+\]
+This transformation is a change in coordinates; it's a function of the initial choice of $\ga$ and $\gb,$ but for convenience's sake we will abbreviate it to $h.$ We find that 
+\[
+P(h\vec{x}) = x_1(\ga x_1 - (\ga x_1 + x_2))(\gb x_1 - (\gb x_1 + x_3)) = x_1x_2x_3 =: Q(\vec{x}),
+\]
+the latter being a variety on $\R^3$ that is simpler to work with than $P.$ It follows that $\mbox{Aut}(P) = h \mbox{Aut}(Q) h^{-1}.$ Observe that $\mbox{Aut}(Q)$ contains the group of diagonal matrices of determinant one, which we call $A_3.$ Note that $A_3$ is a subgroup of $\mbox{SL}(3,\R):$ we see that for $g \in A_3,$ if $g(\vec{x}) = (y_1,y_2,y_3),$ then  $Q(g\vec{x}) = y_1y_2y_3 = \mbox{det}(g) = 1.$
+
+In fact, every element of $\mbox{Aut}(Q)$ is basically some $g \in A_3,$ discounting the 6 possible permutations of coordinates $x_1,x_2,x_3,$ and $\mbox{Aut}(P) = h\mbox{Aut}(Q)h^{-1}.$ So (ignoring permutations) every $a \in \mbox{Aut}(P)$ is of the form $hgh^{-1}$ for an appropriate $g \in A_3.$ We can infer that $\gd(a.[\Z^3]) = \gd(hgh^{-1}.[\Z^3])$ may be made arbitrarily small by some clever choice of $g.$ (Certainly $\gd(g.[\Z^3])$ is no greater than the magnitude of the smallest diagonal entry of $g.$) 
+%above 'clever choice' stuff is kind of awkward
+We can simplify this approach by narrowing our search field. We define a semi-subgroup of $\mbox{Aut}(Q)$ as follows:
+\[
+A_3^+ := \left \{ \begin{pmatrix}
+x & 0 & 0 \\
+0 & y & 0 \\
+0 & 0 & z
+\end{pmatrix}:\,xyz = 1, x \leq 1, y,z \geq 1 \right \}.
+\]
+\begin{tion}
+The Littlewood Conjecture is implied by the following statement: For all $\ge > 0,$ there exists some $g \in A_3^+$ such that
+\[
+\gd(gh^{-1}.[\Z^3]) < \ge.
+\]
+\end{tion}
+\begin{proof}
+The above implies that for arbitrarily small $\ge,$ there are a $g \in A_3^+$ and an integral vector $\vec{x}$ such that$\abs{gh^{-1}\vec{x}} < \ge.$ The $x_1$ component of $gh^{-1}\vec{x}$ is certainly no more than $\ge.$ Recalling that the transformation $h$ is a translation along the second and third coordinates in proportion to the length of the first, we conclude that  $h$ translates $gh^{-1}\vec{x}$ by a distance no greater than 
+\[
+\sqrt{(\ge\ga)^2 + (\ge\gb)^2} = \ge\sqrt{\ga + \gb}.
+\]
+Therefore $\abs{ghg^{-1}\vec{x}} \leq \ge\sqrt{\ga + \gb} + \ge:$ this is a bound that goes to 0 as $\ge$ goes to 0. So $\gd(hgh^{-1}\Z^3)$ can be made arbitrarily small. Now $hgh^{-1}$ is an automorphism of $P,$ meaning that for some $\vec{x} \in \Z^3,$ $P(\vec{x}) < \ge.$
+
+We must confirm that the $x_1$ component of $\vec{x}$ is non-zero. Let $\vec{y} = (0, m, n)$ be a (non-zero) vector in $\Z^3.$  Observe that, for all $g \in A_3^+,$ $gh^{-1}\vec{y} = g\vec{y} = (0, ym, zn),$ for some $y,z \geq 1.$ The length of $\vec{y}$ is at least 1, so the length of $g\vec{y}$ is greater than 1. We see that if the $x_1$ component of an integer vector is zero, then the transformation induced by $gh^{-1}$ in fact \textit{increases} its length. So our assumption that $\gd(hg^-1\Z^3)$ gets arbitrarily small presupposes that the $x_1$ component of the least non-zero integral vector is itself non-zero. We conclude that if, for all $\ge > 0,$ there exists an $h \in A_3^+$ such that $\gd(gh^{-1}\Z^3) < \ge,$ then there exists an integral solution to $P(\vec{x}) < \ge,$ with $x_1 \neq 0,$ thus implying the validity of the LC. 
+\end{proof}
+
+The $\gd$-notation used above is rather clunky because it refers to the length of some transformed integer vector, which we know nothing about explicitly. In the next chapter, we will see that we can condense the information pertaining to $\Z^3$ mapped under a linear transformation, which is a countably infinite collection of vectors, into a single object, a \textit{lattice}.
+
+\section{The Space of Lattices}
+
+A lattice of dimension $n$ is the image of $\Z^n$ under a linear transformation of $\R^n$; it's the set of integral combinations of a basis of $\R^n$, or a `grid' containing the origin. 
+A \textit{unimodular lattice} $\gl \in \mathcal{L}_n$ has a covolume of one, which is to say that the parallelepiped formed by its generating vectors (in algebraic terms, its `fundamental domain') has volume one. We will see that we can think of $\mathcal{L}_n$ as the `space' of unimodular lattices in $n$ dimensions.
+
+Note that there is a natural equivalence between $\mathcal{L}_n$ and the coset space $ X_n = \mbox{SL}(n, \R) / \mbox{SL}(n, \Z).$ (This is why we may regard $\mathcal{L}_n$ as a homogeneous space.) The set of volume-preserving linear transformations of $\R^n$ is simply $\mbox{SL}(n, \R),$ a group which defines a transitive action on $\mathcal{L}_n.$ But any \textit{integral} linear transformation $g \in \mbox{SL}(n, \Z)$ preserves $\Z^3,$ so an application of the orbit-stabilizer theorem tells us that $\mathcal{L}_n$ and $X_n$ are in bijective correspondence. Hence every unimodular $n$-lattice $\gl$ is of the form $g. [\Z^n]$ for some $g \in X^n.$ This fact is useful because it explictily gives $\mathcal{L}_n$ a known algebraic and topological structure, while at the same time giving $X_n$ a geometric interpretation. For instance...
+
+\begin{theorem}[Mahler's Compactness Criterion]
+We define $\mathcal{L}_n(\ge):= \set{\gl \in \mathcal{L}_n: \gd(\gl) \geq \ge},$ that is, the set of lattices that do not intersect an open $\ge$-ball about the origin. A subset $K \subseteq \mathcal{L}_n$ has compact closure (is \textit{precompact}) if and only if for some $\ge > 0,$ $K \subseteq \mathcal{L}_n(\ge)$ (\cite{ME11}).
+\end{theorem} 
+
+Perhaps we can intuitively see that a sequence of unimodular lattices whose $\gd$ values approach zero `degenerates' in a sense: as one dimension of the lattice's fundamental domain gets extremely small, the others get near-infinitely large. This is a sequence with no obvious limit point. In the two-dimensional case, we can imagine a sequence of parallelograms of area one that stretch out into something resembling a line. 
+
+With the compactness criterion in mind, we can actually restate the preceding restatement of the LC in dynamical terms. If we recast the modified diagonal group $A^{3+}$ as a \textit{flow} with two parameters, establishing that $\set{gh_{\ga, \gb}^{-1}.[\Z^n]:\,g \in A^{3+}}$ is unbounded in $\mathcal{L}_n$ would be sufficient to prove the LC. 
+
+We first remarked in the introduction that the one-dimensional variant of the LC is false due to the existence of (infinitely many) badly-approximable numbers. That is,
+\[
+ \liminf\limits_{n \to \infty}\,n \norm{\alpha n} > 0
+\]
+whenever $\ga$ is badly-approximable. As with the Littlewood conjecture, we can express this statement in terms of dynamics on the space of lattices. The one-variable Littlewood problem seeks to minimize the magnitude $\abs{a - n\ga}$ over integer pairs $(a,n).$ Letting
+\[
+h_\ga := \begin{pmatrix}
+1 & -\ga \\
+0 & 1
+\end{pmatrix},
+\]
+
+ we seek $(a,n)$ such that
+\[
+h_\ga \begin{pmatrix}
+a \\
+n 
+\end{pmatrix}
+= \begin{pmatrix}
+a - n\ga \\
+n
+\end{pmatrix}
+\]
+is close to the $y$-axis of $\R^2.$ This formulation leads us to the simplest case of an elegant correspondence between lattice-dynamics and Diophantine approximation, proved in 1985 (\cite{Kle98}) by S. Dani for unimodular lattice spaces of all finite dimension. First, we define an orbit on the point $\Gamma := \mbox{SL}(2, \Z) \in X_2$ (corresponding to $[\Z^2] \in \mathcal{L}_2$) as follows. For $t \in \R^+,$ let
+%mention that there's the concept of BA vectors, generalizing DA to higher dimensions
+\[
+g_t := \begin{pmatrix} e^t & 0 \\ 0 & e^{-t} \end{pmatrix},
+\]
+and let
+\[
+\mathcal{O}_{\ga} := \left \{g_t h_\ga \Gamma \right \}_{t \geq 0}.
+\]
+\begin{theorem}[Dani's Correspondence Lite]
+$\ga \in \R$ is badly-approximable if and only if $\mathcal{O}_{\ga}$ is bounded in $\mbox{SL}(2,\R).$ 
+\end{theorem}
+
+\begin{proof}
+First, suppose that $\ga$ is badly-approximable. Then for some $c >0,$ $n\abs{n\ga - a} \geq c$ for all integer pairs $(a,n)$ with $n \neq 0.$ Note that $c$ is the area of the rectangle bounded by the vectors $(a - n\ga, 0), (0, n).$ The set of $\set{g_t}_{t \in \R^+}$ defines an area-preserving flow because each $g_t$ has determinant 1. Let $ \gl_t \in \mathcal{O}_{\ga}$ be the state of the flow at time $t.$ A rectangle (one corner on a point in the lattice, two sides on the $x$ and $y$-axes) in $\gl_t$ has an area of at least $c.$ Its far corner does not lie inside the square of area $c$ placed at the origin, so $\gl_t \in \mathcal{L}_2(\sqrt{2c}),$ which implies its precompactness by Mahler's criterion. Thus $\mathcal{O}_{\ga},$ the closure of the set of all $\gl_t,$ is bounded.
+
+Conversely, suppose $\mathcal{O}_{\ga}$ is bounded. Then for some $\ge,$ for every $\gl_t \in \mathcal{O}_\ga,$ $\gl_t \in \mathcal{L}_2(\ge).$ Thus a rectangle in $\gl_t$ must have an area of at least $\ge^2/2.$ Every $x \in g_\ga \Gamma$ is of the form $(a - n\ga, n)$, for pair of integers $(a,n)$  Assuming $n$ to be positive, we have that $n \abs{a - n\ga}  \geq \ge^2/2,$ proving that $\ga$ is badly-approximable.
+\end{proof}
+
+%change your use of g's and h's. 
+Dani's correspondence theorem indicates that, in the case of the 1-parameter diagonal matrix flow, $A_2$ acting on $\mathcal{L}_2,$ there exist infinitely many bounded orbits, corresponding to badly-approximable numbers. However, as we have seen in the preceding chapter, the Littlewood conjecture is logically equivalent to a conjecture that there are no bounded orbits of $A_3^+$ (almost a higher-dimensional version of $A_2$) acting on $\mathcal{L}_3.$ Why should we expect the three-dimensional system, the `trickier' of the two, to behave with more rigidity? 
+
+\section{*Hyperbolic Isometries and Lattices*}
+
+[Note: this section is only marginally related to the rest of the chapter but is fascinating in its own right. I present it because it gives the `flavor' of some of the deeper results in homogeneous dynamics while remaining easy to understand.]
+
+Recall that a \textit{M\"obius transformation} (or \textit{linear fractional transformation} is a function $f:\C \to \C$ of the form
+\[
+f(z) = \frac{az + b}{cz+d}
+\]
+with $ad - bc \neq 0.$  If we restrict our focus to linear fractional transformations (LFTs) with real coefficients for which $ad - bc = 1,$ we get an obvious bijection between those maps and $\mbox{SL}(2,\R);$ as such, it is common practice to represent LFTs in matrix form. We will see that $\mbox{SL}(2,\R)$ has a group action on a special subset of $\C,$ defined as
+\[
+M\cdot z \mapsto \frac{az + b}{cz+d},
+\]
+where
+\[
+M = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mbox{SL}(2,\R).
+\]
+For convenience's sake, we will often say that a LFT $f \in \mbox{SL}(2,\R),$ but bear in mind that the way it acts on complex numbers is via the M\"obius transformation, \textit{not} matrix multiplication.
+\begin{tion}
+Let $f$ be a M\"obius transformation with real coefficients such that $ad - bc = 1.$ Then $f$ maps the upper-half complex plane, $\mathbb{H} := \set{x + iy: y > 0},$ to itself. Thus $SL(2,\R)$ gives a group action on $\mathbb{H}.$
+\end{tion}
+\begin{proof}
+For $z \in \C,$ let $\Im(z)$ denote its imaginary component. Suppose that $\Im(z) > 0,$ which is equivalent to $z$ lying in $\mathbb{H}.$ Let $f \in SL(2,\R)$ define an LFT. Then
+\[
+f(z) = \frac{az + b}{cz+d} = \frac{(az + b)(c\bar{z} + d)}{\abs{cz + d}^2}.
+\]
+We know that $z \neq -d/c$ since the latter lies in $\R,$ the boundary of $\mathbb{H}.$ So $f(z)$ is a defined fraction with an entirely real denominator. The only contribution to   $\Im(f(z))$ comes from $bc\bar{z} + daz.$ Letting $z = x + iy$ for $x,y \in \R,$ we find that $\Im(bc\bar{z} + daz) = bc(-y) + ad(y) = (ad - bc)y.$  Since $ad - bc = 1,$ we have that $\Im(f(z)) = y = \Im(z),$ which, by our initial supposition, is greater than zero.
+\end{proof}
+
+The space $\mathbb{H}$ is often called the 'hyperbolic' plane: in Poincar\'e's plane model of a hyperbolic surface (i.e., one with constant negative curvature), the associated Riemannian metric scales distances down as one travels up on $\mathbb{H}$ and increases them as one approaches the boundary of $\mathbb{H},$ which is to say $\R.$ As we shall see, this metric induces a non-Euclidean geometry in which the equivalent of Euclid's fifth, 'parallel' axiom fails to hold. It turns out (see \cite{ME11}) that M\"obius transformations corresponding to $SL(2,R)$ are, remarkably, both conformal (locally angle-preserving) and hyperbolically isometric. 
+
+Under the above action, the matrix 
+\[
+\begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix}
+\]
+acts trivially on $\mathbb{H}.$ For this reason we often consider instead the \textit{projective} special linear group, $\mbox{PSL}(2, \R) = \mbox{SL}(2,\R) / \set{\pm I_2},$ which acts transitively upon $\mathbb{H}:$ fixing a reference point in the upper half-plane---$i$ is the logical choice---for each $z \in \mathbb{H},$ there exists a M\"obius transformation $f \in \mbox{PSL}(2,\R)$ such that $f(i) \mapsto z.$ Infinitely many of them, actually: it is easy to verify that the stabilizer of $i$ under this action is the set of `rotational' linear transformations, viz. matrices of the form
+\[
+\begin{pmatrix} \cos(\theta) & \sin(\theta) \\ -\sin(\theta) & \cos(\theta) \end{pmatrix}
+\]
+with $\theta \in \R$ corresponding to the angle of rotation. This set of matrices is also known as the special orthogonal group in two dimensions, $\mbox{\mbox{SO}}(2).$ 
+
+\begin{tion}
+The stabilizing group of the LFT-orbit of $i \in \mathbb{H}$ is the set of transformations coming from $\mbox{SO}(2).$ Furthermore, the action of $\mbox{PSL}(2,\R)$  on $\mathbb{H}$ is transitive. Therefore, by the orbit stabilizer theorem, we have a set bijection 
+\[
+\mathbb{H} \cong \mbox{SL}(2, \R) / \mbox{SO}(2).
+\]
+(Because $\set{\pm I_2} \in \mbox{SO}(2),$ we can drop the requirement of dealing with projective groups.)
+\end{tion}
+
+\begin{proof}
+First, let $f \in \mbox{PSL}(2,\R)$ and suppose that $f \cdot i = i.$ Then, for the corresponding entries of $f,$
+\[
+\frac{ai + b}{ci+d} = i,
+\]
+which implies that
+\[
+ai + b = -c + di.
+\]
+Clearly $a = d$ and $b = -c.$ Given that $ad - bc = 1,$ we have that $a^2 + b^2 = 1,$ so for some $\theta \in [0, 2\pi),$ $a = \cos(\theta)$ and $b = \sin(\theta).$ Thus $f \in \mbox{SO}(2).$ Conversely,  a straightforward but tedious calculation shows that transformations deriving from $\mbox{SO}(2)$ map $i$ to $i.$
+
+It remains to show that the action of $\mbox{SL}(2,\R)$ of $\mathbb{H}$ is transitive. Let $z = x + iy \in \mathbb{H}.$ Consider the following M\"obius transformation:
+\[
+f = \begin{pmatrix} \sqrt{y} & x / \sqrt{y} \\ 0 & 1/\sqrt{y} \end{pmatrix}.
+\]
+Note that $\mbox{det}(f) = 1$ and that
+\[
+f(i) \mapsto \frac{\sqrt{y}i + \frac{x}{\sqrt{y}}}{\frac{1}{\sqrt{y}}} = x + iy,
+\]
+showing that $\mbox{SL}(2,\R)$ has transitive action. (In fact, we can find an element of the group mapping $z$ to $w$ for any $z,w \in \mathbb{H}.$ Suppose that for $A,B \in \mbox{SL}(2,\R)$ we have $A(i) \mapsto z$ and $B(i) \mapsto w.$ Then $A^{-1}B(z) \mapsto w.$)
+\end{proof}
+
+We can deduce a similar identification between $\mbox{SL}(2,\R)$ and the \textit{unit tangent bundle} of the upper-half plane, $T^1\mathbb{H}.$ The unit tangent bundle of $\mathbb{H}$ is a \textit{twofer} space (my own terminology) comprising points of $\mathbb{H}$ each paired with some complex vector of unit length: letting $C$ denote the boundary of the unit disc, we see that $T^1\mathbb{H} = \Hyp \times C.$  One might also think of the space as the collection of derivatives of curves (of normalized speed) passing through each $z \in \mathbb{H}.$ When acting on $T^1\Hyp,$ $\mbox{SL}(2,\R)$ does the usual thing to $\mathbb{H},$ and performs the \textit{derivative action} on $\C$: namely, mapping the associated M\"obius transformation down to its derivative.
+
+To wit, let $(z, v) \in T^1\mathbb{H}.$ Then, for $f \in \mbox{SL}(2, \R),$ we define the derivative action as 
+\[
+\mbox{D}f(z,v) \mapsto (\frac{az + b}{cz + d}, \frac{v}{(cz + d)^2}),
+\]
+a fact we obtain from applying the quotient rule to $f$ viewed as a complex-differentiable function of $z.$ Given that any $f \in \mbox{SL}(2,\R)$ is a hyperbolic isometry, the ensuing derivative vector $v/(cz+d)^2$ has (hyperbolic) length 1 if $v$ has length one. Hence $\mbox{PSL}(2,\R)$ gives a well-defined action on $T^1\Hyp,$ and this action is `free': for every $(z,v), (w,u) \in T^1\Hyp$ there is a unique element that maps the former to the latter. Perhaps the easiest understanding of this is that $\mbox{SO}(2),$ which stabilized elements of $\Hyp$, is the natural symmetry group of $C.$ If we do not mod out $\mbox{SL}(2,\R)$ by it, we regain a sense of `directionality' that, along with position, uniquely defines a point in $T^1\Hyp.$ A remarkable conclusion we can draw from this discussion is that the space of unimodular two-dimensional lattices is isomorphic to two copies of the unit tangent bundle of the hyperbolic plane. And just as we chose $i$ to be the representative element of $\Hyp,$ (every point $z \in \Hyp$ is identified with the unique linear transformation in $\mbox{SL}(2, \R) / \mbox{SO}(2)$ mapping $i$ to $z$) we pick a new representative element of $T^1\Hyp$: $i$ paired with the upwards-pointing unit vector, or $(i,i).$  
+
+In a geometric space, \textit{geodesics} refer, roughly speaking, to locally distance-minimizing curves. They can be uniquely determined by specifying that they pass either through two points or through one point along a certain direction. In ordinary Euclidean space, geodesics are simply straight lines. In global navigation, these are called 'great circles' or, occasionally, 'ortrodromes,' and though they appear to be curved lines on most flat projections of the globe's surface, actual travel along a great global circle would appear to an observer as movement in a straight line. In our planar model of hyperbolic geometry, geodesics look like lines or circles that intersect the boundary $\R$ orthogonally, but, similarly, they look like straight paths locally. 
+
+The matrices of $SL(2,\R)$ that correspond to geodesics are the group of diagonal matrices, $A_2$ (!) and its conjugate copies. We can see a basic illustration of this fact if we consider how a familiar one-parameter matrix group acts on $i.$ We define the \textit{geodesic flow} as follows: 
+\[
+\set{\gg}_{t \in \R} := \left \{ \begin{pmatrix} e^{t/2} & 0 \\ 0 & e^{-t/2} \end{pmatrix} \right \}_{t \in \R}.
+\]
+Observe that $\gg_t \cdot i \mapsto e^ti,$ and so the orbit $\set{\gg_t \cdot i}_{t \in \R}$ parametrizes a path along the imaginary axis of $\Hyp.$ Since the hyperbolic metric scales down local distance for $z$ with $\Im(z) > 1$ and increases it for $\Im(z) < 1,$ it is that this `exponentially accelerating' path moves at unit speed in $\Hyp.$ 
+
+Now let $z_0, z_1$ be any two points in $H.$ We know that for some $f \in SL(2,\R),$ $f(z_0) = i.$ We don't know anything in particular about $f(z_1),$ but can infer that for some rotation $g \in \mbox{SO}(2),$ $f(z_0) = i$ is stabilized, but $f(z_1)$ is rotated to a congruent vector lying on the imaginary axis. (A compelling analogy for the action of $\mbox{SO}(2)$ on $\Hyp$ is that $i$ is like the center of a bizarre clock, and allowing a hand of the clock to extend from $i$ to $z \in \Hyp,$ an element of $\mbox{SO}(2)$ rotates the hand while preserving its hyperbolic length.) So the points $g\circ f(z_0) = i$ and $g\circ f(z_1) = y_1i$ (for some $y_1 \in \R)$ both lie on the imaginary axis. Then the flow $\set{\gg}_{t \in [0, ln(y_1)]}$ parametrizes a path from $i$ to $y_1i,$ which being a geodesic, is the shortest path possible. Thus the unique geodesic segment $l$ running between $z_0$ and $z_1$ is given by
+\[
+l = f^{-1}g^{-1}\set{\gamma}_{t \in [0, ln(y_1)]}gf.
+\]
+The preceding discussion has afforded us another geometric interpretation of the space of 2-D lattices: it's a quotient of $T^1\Hyp = \mbox{SL}(2,\R)$ by a certain discrete, `spanning' subgroup, $\mbox{SL}(2,\Z),$ or $X_2$ (following the notation introduced in Section 4.2). In fact, the \textit{quotient space} $X_2$ is a fundamental domain of $\mbox{SL}(2,\Z)$ acting on $\Hyp$: for every $z \in \Hyp,$ there is a unique $f \in \mbox{SL}(2,\Z)$ such that $z$ lies in the coset $f \cdot X_2.$ (The easiest analogy is to compare $\T = [0,1)/ \sim$ as a fundamental domain for $\Z$ acting on $\R.$) When equipped with the hyperbolic metric, $X_2$, also known as the \textit{modular surface}, is a locally-compact space of finite volume. One can visualize the modular surface as the surface of a teardrop whose narrowing cusp (corresponding to the area bordering $\R$ in $\Hyp$) extends off to infinity. Compact (in the `lattice' sense associated with MCC) subsets of the modular surface have boundaries that terminate somewhere along the cusp. 
+
+We will mention the \textit{horocyclic flow}, which is in many ways the natural counterpart to the geodesic flow. Whereas geodesics are `longitudinal' curves, the set of vertical lines and circles that approach the real line orthogonally, horocycles are lines of `latitude': horizontal lines and circles that lie tangent to $\R.$ A horocyclic flow has a conventional group parameterization:
+\[
+\set{\eta}_{t\in \R} := \left \{ \begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix} \right \}_{t \in \R}.
+\]
+Observe that $\eta_t \cdot i \mapsto z + t,$ so the orbit $\set{\eta_t \cdot i}_{i \in \R}$ gives a horizontal line passing through $i.$ 
+
+Now recall that in the 2-D Dani correspondence, we began with a matrix, 
+\[
+h_\ga = \begin{pmatrix} 1 & -\ga \\ 0 & 1 \end{pmatrix}
+\]
+multiplying integer vectors $(a,n)$, which was itself multiplied on the left by a set of diagonal matrices belonging to the geodesic flow. We can interpret the Dani correspondence as a theorem concerning the boundedness of geodesic flows, adjusted by certain horocyclic shifts, on the modular surface. Recall that, under ordinary matrix multiplication, $h_\ga \cdot (a,n) = (a - n\ga, n).$ Since the geodesic flow acts not on points in $T^1\Hyp$ but rather their `representative' linear transformations (namely, the ones mapping them to the reference point $(i, i),$) we find the consider the $\gg_t$-orbit of the unique $f \in \mbox{PSL}(2,\R)$ associated with $(a - n\ga, n).$ The Dani Correspondence tells us that the orbit of this $f$ is bounded if and only if $\ga$ is badly-approximable. When we turn to the modular surface, badly-approximable $\ga$ give rise to $\gg_t$-orbits that rise no higher than a certain point along the cusp of $X_2,$ meaning that their closures are bounded sets. Remarkably, it can be seen (\cite{Kle98}) that the maximum height attained by such flows corresponds to the magnitude of the largest denominator of convergents of the continued fraction expansion of $\ga.$ It's worth remembering that the convergents of badly-approximable numbers are bounded.  
+
+\section{Invariant Measures, Orbit Closures, and Rigidity Revisted}
+
+We have translated the LC into a problem of determining the (un)boundedness of orbits of points of the form $h_{\ga, gb}.[\Z^n]$. Superficially, this conversion into a dynamical problem may seem pointless, but we may now draw upon the methodologies of related problems in dynamics. In general, dynamicists often prove things about the overall `rigidity' of a system, which in turn informs our knowledge of the properties of individual points. 
+
+Suppose we were able to give a complete classification of every minimal, closed, $A_3$-invariant subset $C \subset \mathcal{L}_n.$ As the closure of every $h_{\ga, gb}.[\Z^n]$-orbit is such a $C,$ with luck we might be able to prove that no such orbit is bounded. In his proof of the Oppenheim Conjecture, which was a landmark application of dynamics to number theory, Margulis used this essentially `topological' method. His approach (the first instance of a class of theorems codified by M. Ratner) does not simply recycle into a proof of the LC, largely because the Oppenheim Conjecture concerns unipotent flows whereas the dynamical approach to the LC concerns hyperbolic flows. The former behave more predictably over time.
+
+The progress on the LC is an illustration of the heuristic that measures can be easier to work with than sets. In brief, measures on a space relate to special subsets thereof but come with a great deal more of applicable structure. For instance, \textit{ergodic decomposition} gives a procedure for analyzing the smallest components of a measure invariant to some transformation $T$, whereas there is no similar method for determining the minimal subsets of a closed, $T$-invariant set. 
+
+In Chapter 3 we saw that a measure which is $T$-invariant indicates the existence of a certain $T$-invariant closed set: viz. the support, the maximal closed set on which a measure `lives.' While this connection is a more tenuous one, a classification of all $T$-invariant ergodic measures approaches a classification of $T$-invariant minimal closed sets. If we had a measure classification of $A_3$ that implied the existence of diverse, non-rigid invariant measures, we would expect that there are diverse and non-rigid orbits. But a rigidity of measures suggests a rigidity of closed sets which suggests a rigidity of orbits. Think of this as a dogma for dynamicists; it is along these lines that the best result on the LC proceeds. 
+
+We will clarify what we mean by labelling the action of $A_3$ on $\mathcal{L}_3$ as hyperbolic. A dynamical system is called \textit{hyperbolic} to indicate the presence of a transformation that expands distance between points in one direction and/or contracts in another, 'transverse' direction. Circle expansions are perhaps the simplest (quasi-)hyperbolic systems; diagonal matrix action on homogeneous lattice spaces gives a more involved example. We will see that these two classes of systems evoke each other in interesting ways, especially regarding questions of rigidity. One first, elementary observation we can make is that the construction of $\T^n$ and $\mathcal{L}_n$ are quite similar: the spaces, both of which have finite volume, are the quotient of a connected topological group by a discrete, infinite subgroup: $\R^n/\Z^n$ and $\mbox{SL}(n,\R)/\mbox{SL}(n,\Z),$ respectively.  
+
+We recall that $E_3$ (or any circle expansion map) produces some weird orbits, in addition to everywhere-dense and periodic ones: by playing around with base 3-expansions of numbers, we found in section 3.1 that we could produce an orbit that was dense in the Cantor ternary set, a fractal. As per our (dogmatic) expectation, the diverse orbits of $(\T, E_3)$ correlate with a plethora of closed, invariant subsets and invariant measures.
+
+One-parameter circle expansions compare quite nicely to one-parameter diagonal flows on the space of lattices. As the Dani correspondence shows, infinitely many orbits (corresponding to the badly-approximable numbers) of $\mathcal{L}_2$ under $A_2$ have bounded closure, being proper, non-discrete subsets of their space. In fact, these badly-approximable orbits are typically Cantoresque fractal sets (c.f. \cite{Mor05}) rather than algebraically well-behaved subgroups. Hence we conclude that $(\mathcal{L}_2, A_2)$ is a non-rigid system---there are too many ergodic measures and minimal closed sets to count.
+
+The analogy continues, albeit more tenuously, when we turn toward two-parameter problems in both system classes.  Recall, from our discussion in section 3.4, that $\times2\times3$ refers to the two-parameter semi-subgroup $\set{2^m3^n}_{m,n \geq 0} \subset \T.$ Furstenberg proved that the orbit closure $\overline{\set{2^m3^nx}}_{m,n \geq 0}$ is either all of $\T$ when $x$ is irrational or a finite set if $x$ is not. He conjectured that the only $\times2\times3$-invariant, ergodic probability measures derive from the two possible orbit types: Lebesgue measure, or some Dirac measure supported on a finite set of rationals. Rudolph proved this measure-classification theorem under the assumption that either $\times2$ or $\times3$ acts with positive entropy with respect to the measure in question.
+
+The semigroup of positive diagonal matrices $A_3^+$ is a two parameter flow on $\mathcal{L}_3.$  Grigory Margulis conjectured (c. 2000) that a compact orbit closure $\overline{A_3\cdot x}$ in $\mathcal{L}_3$ is of the form $H'\cdot x$ where $H' \geq A_3^+$ is a subgroup of $\Gamma /G$ containing $A_3^+:$ in essence, any positive diagonal orbit closure has a tidy algebraic structure. In measure-theoretic terms, Margulis's conjecture posits that an $A_3$-invariant and ergodic probability measure on the space of unimodular lattices is `algebraic' with respect to some $H'$ (assigned with the properties above). 
+
+\begin{remark}[Algebraic measures]
+For any locally compact, Hausdorff topological group, there exists a unique probability measure that is invariant under (left) action, which gives finite measure to all compact sets. If the group itself is compact, then the associated measure is also right-invariant and is called \textit{Haar measure.} For instance, the Haar measure on $\R/\Z$ (with a group action of either addition or multiplication) is just Lebesgue measure. Thus Furstenberg's $\times2\times3$ measure classification conjecture posits that the only non-atomic invariant probability measure is 'algebraic' in the obvious sense. We also note that the special linear group, as a Lie group, is locally compact and passes down this property to its subgroups.
+\end{remark}
+
+The 2006 theorem of Einsiedler, Katok, and Lindenstrauss, alluded to at the beginning of this chapter, evokes Rudolph's result on $\times2\times3$ in terms of results, 
+though the respective methodologies differ a great deal.  One might classify both investigations as pertaining to the general question of the rigidity of higher-rank hyperbolic homogeneous actions. In full generality, their theorem is as follows: 
+% special case of the general question about the structure of invariant measures for higher rank hyperbolic homogeneous actions
+\begin{theorem}[Einsiedler-Katok-Lindenstrauss]
+Suppose $n \geq 3$ and let $\mu$ be an $A_n$-invariant, $A_n$-ergodic probability measure on $\mathcal{L}_n$ such that there exists an element of $A_n$ acting with positive entropy. Then $\mu$ is algebraic, coinciding with the (unique) $H'$-invariant probability measure on a closed orbit $H'x_0,$ where $x_0 \in \mathcal{L}_n$ and $A_n \leq H' \leq \mbox{SL}(n, \R)$ is closed.
+\end{theorem}
+
+As $\mbox{SL}(n,\R)$ is a well-understood algebraic object, the above theorem almost gives a full measure classification of the system: to the extent that we know all the intermediate subgroups of $\mbox{SL}(n,\R)$ and $A_n,$ we know all (positively entropic) $A_n$-invariant measures. Of course, if we could forgo the assumed condition of positive entropy, we would have the full measure classification of $A_n$ on $\mathcal{L}_n,$ and by extension, the full resolution of the LC. 
+
+In the case of $n = 3,$ the only possible $A_3^{+}$-invariant measures are invariant on all of $A_3$ (because they are `algebraic' with respect to some subgroup \textit{containing} $A_3$), which precludes the existence of special bounded orbits $\set{g_{s,t}h_{\ga,\gb}x_0}_{s,t\geq0}  \subseteq \mathcal{L}_3.$ (Recall from 4.1 that $g_{s,t}$ is a two-parameter flow spanning $A_3^{+}$, and $h_{\ga,\gb}$ is the change-of-coordinate matrix associated to the Littlewood form for irrational coefficients $\ga,\gb.$) We know that such bounded orbits won't exist, for if they did, then it would be possible to define an $A_3^{+}$-invariant measure that is not algebraic in the above sense. But an $A_3^{+}$-invariant measure should also be $A_3$-invariant: every element of $A_3^{+}$ is (up to permutation of coefficients) an element of $A_n.$ 
+%earnest q: invariant w/r/t A^3+ means invariant w/r/t A^3???
+
+We can conclude that $A_3^{+}h_{\ga,\gb}.[\Z^3]$ is unbounded in $\mathcal{L}_3,$ which implies (by MCC) that $\gd(A_3^{+} h_{\ga,gb}.[\Z^3]) < \ge$ for all $\ge>0,$ That is, one can obtain an arbitrarily small non-zero vector from the (positive) diagonal flow action on the Littlewood form. What's more, we have guaranteed that the first coordinate has positive magnitude. Knowing that diagonal matrices are automorphisms of Littlewood's form $P,$ we find that $P(\vec{x}) < \ge$ is solvable in the integers. Which is all a roundabout way to say that
+\[
+\liminf \limits_{n \to \infty} n \norm{\ga n} \norm {\gb n} = 0
+\]
+for all $\ga, \gb.$ Except that the 2006 theorem of EKL didn't prove that exactly---it was shown only that the Littlewood-exceptional set of $\ga, \gb \in \R^2$ has Hausdorff dimension 0. As it turns out, this is a very strong statement, far stronger than saying that the exceptional set has zero measure (which was `known' ever since Khinchine's theorem was published, even before the LC was posed). Consequently, we are led to believe that the above equation holds true for \textit{even more} than almost every choice of $\ga, \gb,$ but (perhaps) not always. But what does that actually mean? 
+
+\section{Beyond the Zero}
+Motivating this final section will be the need for a refinement of Lebesgue measure, which is too crude an instrument to gauge minuscule sets: how does one distinguish between the size of two zero-measure sets? \textit{Hausdorff dimension} provides us with a more delicate notion of size. We will arrive at this new conceptualization of dimension by first constructing a family of measures $\set{\mu_d:\,d \geq 0}.$ These \textit{Hausdorff measures} can be defined with respect to any subset $X$ of a metric space $M.$ Whenever $d$ is an integer and $M = \R^d,$ then $\mu_d$ coincides with Lebesgue measure. Furthermore, if $X$ is bounded, we can assign a unique non-negative real number to $X,$ $\mbox{dim}_H(X),$ so that (i) if $d < \mbox{dim}_H(X),$ then $\mu_d(X) = \infty$, and (ii) if $d > \mbox{dim}_H(X),$ then $\mu_d(X) = 0.$ As one might expect, this assigned threshold value is the Hausdorff dimension of $X.$ 
+
+Before we introduce technicalities, we'll see some examples of this 'threshold' behavior playing out. First of all, Lebesgue measure only tells us something useful about about a set when the dimension of measurement agrees with that of the set: for instance, a (2-D) disc has zero volume but infinite length (if we were to somehow roll it out into a line), for instance. But when a set has a dimension that, intuitively, must lie in between two positive integers, Lebesgue measure in general becomes problematic. These sets of `fractional' dimension are fractals, of course. One commonly-encountered example is the von Koch snowflake, an iteratively-constructed form with finite area yet an infinitely long perimeter: its Hausdorff dimension is $\log(4)/\log(3),$ about 1.26. Another example, one that we've already seen, is the Cantor set: its (Lebesgue) length is 
+\[
+1 - 1/3 - 2/9 - 4/27 \ldots \to 0,
+\]
+yet there are infinitely many points in the set (both Hausdorff and Lebesgue 0-dimensional measure correspond to counting points, as we shall see). The Cantor set's Hausdorff dimension is $\log(2)/\log(3).$
+
+
+\begin{definition}[Hausdorff Measure]
+With $X,M,$ and $d \in \R_0^+$ as before, let
+\[
+\mu_d^{\ge} := \inf \limits_{(U_i)} \sum_i (\mbox{diam}(U_i))^d,
+\]
+where the infimum is taken over all countable covers $(U_i)_{i \in \N}$ of $X$ such that $\mbox{diam}(U_i) < \ge$ for all $i.$ We call such covers \textit{$\ge$-covers.} Then the  $d$-dimensional Hausdorff measure of $X$ is
+\[
+\mu_d(X) = \lim \limits_{\ge \to 0+} \mu_d^{\ge}.
+\]
+Notice how the set-up of Hausdorff measure evokes Lebesgue outer measure; the idea with both functions is to countably cover (with arbitrarily small $\ge$-balls $U_i$) $X$ as efficiently as possible. Again, if $X$ is bounded, it has a Hausdorff dimension, a non negative (possibly infinite) number $d$ such that Hausdorff measure for $d'$ less than $d$ returns infinity and returns 0 for $d'$ greater than $d.$ 
+\end{definition}
+
+Calculating exact Hausdorff measure (and by extension, dimension) isn't typically easy. Because the measure depends on taking an infimum of sums, it's more common for mathematicians to find upper bounds, which only require one covering per $\ge,$ than lower bounds, which require computing all possible coverings. It is then fortunate for us that for self-similar fractals (such as the von Koch snowflake and Cantor set), Hausdorff dimension coincides with the simpler concept of \textit{box dimension}, (\cite{Sch07}) which in general gives an upper bound for $\mbox{dim}_H(X).$
+
+\begin{definition}[Box Dimension]
+Let $X$ be a subset of $\R^n.$ For a partition of $\R^n$ into $n$-cubes (or dimension smaller than $n$ if applicable) of side length $s,$ let $N(s)$ denote the number of $s$-cubes that intersect $X.$ Then the box-counting dimension of $X$ is
+\[
+\lim \limits_{s \to 0} \log (N(s))/ \log(1/s). 
+\]
+\end{definition}
+
+Its easier to see how this works on (bounded) self-similar sets, which obviates the need to take the limit as $s$ gets small (if $X$ is a self-similar set, it may be split into $N(s)$ congruent subsets, each of which is a copy of $X$ scaled down by a factor of $s.$ For instance, the unit square may be split into four squares of side-length 1/2. We find that its self similarity dimension, $\log(4) / \log(2) = 2,$ agrees with its canonical dimension. In a less trivial example, the Cantor thirds set may be split into two copies of itself, both scaled down by a factor of 3. Its self-similarity dimension (i.e., box-counting and Hausdorff dimension) is $\log(2) / \log(3) \approx  .631,$ which matches our expectation that its 'true' dimension lies somewhere between 0 and 1. It should be apparent that one can find Cantoresque sets that take any dimension between 0 and 1.
+
+With this new conception of the size of sets, we can now return to a matter first broached in section 2.3, regarding the existence of a refinement of the Lebesgue theory of Diophantine approximation. Recall that if $\psi: \N \to \R^+$ is a sequence, the family of $\psi$-approximable numbers is 
+\[
+W(\psi) = \set{x \in [0,1] : \norm{qx} < \psi(q) \; \mbox{i.o.}},
+\]
+infinitely often with respect to $q.$ This is of course a limsup set, so if we define (using standard $\ge$-ball notation)
+\[
+A_q(\psi) := \bigcup_{p = 0}^q B(\frac{p}{q},\frac{\psi(q)}{q})\cap [0,1]
+\]
+then 
+\[
+W(\psi) = \limsup \limits_{q \to \infty} A_q(\psi) = \bigcap_{t = 1}^\infty \bigcup_{q=t}^\infty A_q(\psi).
+\]
+Unpacking this definition, we have that for every $t,$ the collection of sets $A_q(\psi)$ over $q \geq t$ is a cover of $W(\psi).$ (Note that each $A_q(\psi)$ is itself a union of balls; we're dealing with a union of unions.) If $\psi$ is monotonic and $\psi(q) <1$ for all $q$ large enough, then for each $\ge > 0$ we may choose a $t$ such that $\ge > \psi(t)/t.$ Therefore the collection $\set{A_q(\psi)}_{q \geq }$ gives a $\ge$-cover of $W(\psi).$ Therefore
+\[
+\mu_d^{\ge} \leq \sum_{q = t}^{\infty}q(2\psi(q)/q)^d.
+\]
+(The additional factor of 2 is due to the fact that we defined the balls in each $A_q$ in terms of their radii, whereas our definition Hausdorff measure uses diameters.)
+The above sum goes to zero as $t$ goes to infinity if
+\[
+\sum_{q=1}^{\infty} q^{1-d}(2\psi(q))^d < \infty,
+\]
+for the limit of the tail of a convergent sum goes to zero. This calculation proves the convergent case of the following 1931 theorem of Jarn{\'i}k.
+
+\begin{theorem}[Jarn{\'i}k's Theorem]
+Let $\psi: \N \to \R^+$ be a monotonic function and $d \in (0,1).$ Then
+\[
+\mu_d(W(\psi)) = 
+\begin{cases}
+0 \quad \mbox{if}\quad \sum_{q=1}^\infty q^{1-d}(\psi(q))^d < \infty,\\
+\infty \quad \mbox{if} \quad \sum_{q=1}^\infty q^{1-d}(\psi(q))^d = \infty.
+\end{cases}
+\]
+\end{theorem}
+Jarn{\'i}k's theorem is an analogue to Khinchin's theorem in a fairly faithful sense. For both theorems, the `divergent' case is far more difficult to prove, and we can forgo the requirement for monotonicity of $\psi$ in the divergent case (\cite{BRV16}).
+
+To address a hanging matter from Section 2.3, suppose that $\psi(q) = q^{-\gt}$ for some $\gt > 0.$ Then if $d > 2/(t+1),$
+\[
+\sum_{q=1}^\infty q^{1-d}(\psi(q))^d = \sum_{q=1}^\infty q^{-(td + d -1)} = \sum_{q=1}^\infty q^{-(1+\gd)} < \infty
+\]
+for some $\gd>0.$ So for $t \geq 1,$ we have that $\mbox{dim}_H(W(\gt)) \leq 2/(\gt  +1).$ In fact, it can be seen from Jarn{\'i}k's Theorem that $\mbox{dim}_H(W(\gt)) = 2/(\gt  +1)$: this result is known as the Jarn{\'i}k-Besicovitch theorem, and was proved by the former in 1928 and by the latter in 1931, using different methods. The result of this fact is that (e.g.) $\mbox{dim}_H(W(2)) = 2/3$ and $\mbox{dim}_H(W(100)) = 2/101,$ confirming our intuition that the size of families of $\gt$-well approximable numbers decrease with $\gt.$
+
+The numbers that lie outside of every $W(\gt),$ a set which has Hausdorff dimension of zero, are known as the \textit{Liouville numbers}. In discovering the first such number (1844), Joseph Liouville was the first to prove the existence of transcendental numbers.
+
+The following elegant formulation unites the theorems of Khintchin and Jarn{\'i}k by including the case where $d = 1$ (which, recall, is 1-D Lebesgue measure). 
+
+\begin{theorem}
+Let $\psi: \N \to \R^+$ be a monotonic function and $d \in (0,1].$ Then
+\[
+\mu_d(W(\psi)) = 
+\begin{cases}
+0 \quad \mbox{if}\quad \sum_{q=1}^\infty q^{1-d}(\psi(q))^d < \infty,\\
+\mu_d([0,1]) \quad \mbox{if} \quad \sum_{q=1}^\infty q^{1-d}(\psi(q))^d = \infty.
+\end{cases}
+\]
+\end{theorem}
+
+To conclude, we recapitulate the best progress yet made toward solving the Littlewood Conjecture. By classifying the $A_3$-invariant, ergodic measures on $\mbox{SL}(3,\R)/\mbox{SL}(3,Z)$ (or rather, those which exhibit positive entropic behavior), Einsiedler, Katok, and Lindenstrauss proved the following:
+
+\begin{theorem}
+Let 
+\[
+\Xi = \left \{ (\ga,\gb) \in \R^2:\,\liminf \limits_{n \to \infty} n\norm{n\ga}\norm{n\gb} > 0 \right \}.
+\]
+Then the Hausdorff dimension of $\Xi$ is 0. In fact, $\Xi$ is a countable union of compact sets with zero box dimension. 
+\end{theorem}
+It readily follows that for any $d > 0,$ $\mu_d(\Xi) = 0.$
+
+What should we think of this result? The rationals, $\mod \Z$, have 0 Hausdorff dimension, as do any bounded countable set. These aren't the only ones, however: one can define a sufficiently 'thin' Cantor set whose (downward) scaling factors, rather than remaining constant, increase exponentially faster than $2^n.$ Such a set has box-dimension zero yet (by the same argument that we made in chapter 3) is bijective with $\set{0,1}^\N,$ therefore uncountable. While we may know little indeed about the characterization of $\Xi,$ we can interpret its magnitude and distribution as comparable to either a countable collection of isolated points or an extremely sparse fractal. Alternatively, in light of the Jarn{\'i}k-Besicovitch theorem, $\Xi$ is smaller than \textit{every} class of $\gt$-well approximable numbers. Even by the standards of the most discriminating measures available to us, $\Xi$ is an unfathomably minuscule (albeit possibly infinite) set. Which is to say that the 2006 result of EKL, if not an unqualified and complete proof of the Littlewood Conjecture, comes pretty darn close. Close enough?
+
+\bibliographystyle{amsalpha}
+\bibliography{./nikku_bibliography}
+\nocite{*}
+
+\end{document}
